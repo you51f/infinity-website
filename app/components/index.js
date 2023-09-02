@@ -1,0 +1,12 @@
+export { default as HeroBanner } from "./HeroBanner";
+export { default as Advertising } from "./Advertising";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
+export { default as Product } from "./Product";
+export { default as Service } from "./Service";
+export { default as Supplier } from "./Supplier";
+export { default as TeamMember } from "./TeamMember";
+export { default as SectionOfWork } from "./SectionOfWork";
+export { default as Statistics } from "./Statistics";
+export { default as AnimatedNumber } from "./AnimatedNumber";
+export { default as WorldLocations } from "./WorldLocations";
