@@ -4,6 +4,7 @@ import AviationBanner from '../components/AviationBanner'
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
 import { POST } from '../api/contact/route';
+import { Footer, Header } from '../components';
 
 const contact = () => {
   const [company, setCompany] = useState('');
@@ -81,6 +82,7 @@ const contact = () => {
   };
   return (
     <div>
+      <Header/>
       
       <div className='aviation-form2'>
         {/* heading */}
@@ -241,6 +243,7 @@ const contact = () => {
         </div>
       </div>
       </div>
+      <Footer/>
      
     </div>
   )

@@ -8,7 +8,7 @@ import { Header, HeroBanner, Service, Product, SectionOfWork, Footer, Advertisin
 export default function Home() {
   return (
     <main >
-      {/* <Header/> */}
+      <Header/>
       <HeroBanner/>
       <SectionOfWork/>
       {/* heading */}
@@ -22,7 +22,7 @@ export default function Home() {
       <Service />
       <TeamMember/>
       <Supplier/>
-      {/* <Footer/> */}
+      <Footer/>
     </main>
   ) 
 }

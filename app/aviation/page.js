@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import AviationBanner from '../components/AviationBanner'
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
+import { Footer, Header } from '../components';
 
 const aviation = () => {
   const [company, setCompany] = useState('');
@@ -68,6 +69,7 @@ const aviation = () => {
   };
   return (
     <div>
+      <Header/>
       <AviationBanner/>
       {/* heading */}
       <div className="heading">
@@ -291,6 +293,7 @@ const aviation = () => {
         </div>
       </div>
       </div>
+      <Footer/>
      
     </div>
   )

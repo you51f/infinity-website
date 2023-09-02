@@ -1,6 +1,6 @@
 "use client"
 import React, {useState} from 'react'
-import { WorldLocations, Statistics, TeamMember } from '../components'
+import { WorldLocations, Statistics, TeamMember, Footer, Header } from '../components'
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
 
@@ -67,6 +67,7 @@ const about = () => {
   };
   return (
     <div>
+      <Header/>
         {/* heading */}
       <div className="heading about">
         <div className='pre-heading'><h3 className='heading-text'>Who</h3>&nbsp;<h3 className='heading-text2'>Are We?</h3></div>
@@ -246,6 +247,7 @@ const about = () => {
         </div>
       </div>
       </div>
+      <Footer/>
     </div>
   )
 }
