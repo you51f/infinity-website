@@ -23,8 +23,8 @@ export async function POST(request) {
         },
     })
       await transporter.sendMail({
-        from: email,
-        to: email,
+        from: "Consulting.infinityaviation@gmail.com",
+        to: "Consulting.infinityaviation@gmail.com",
         subject: body.subject,
         text: "A message from infinity website",
         html: `<h2>Company: ${body.company}</h2><p><h3>Customer: ${body.firstName} ${body.lastName}</h3> </p><p>${body.email}</p><p>${body.phone}</p><h3>Ordered Part: ${body.part}</h3><h3>Quantity: ${body.quantity}</h3><h3>Condition: ${body.condition}</h3><h3>Message:</h3><p style="white-space: pre-wrap">${body.comment}</p>`
@@ -42,8 +42,8 @@ export async function POST(request) {
         },
     })
       await transporter.sendMail({
-        from: email,
-        to: email,
+        from: "Consulting.infinityaviation@gmail.com",
+        to: "Consulting.infinityaviation@gmail.com",
         subject: body.subject,
         text: "A message from infinity website",
         html: `<h2>Company: ${body.company}</h2><p><h3>Customer: ${body.firstName} ${body.lastName}</h3> </p><p>${body.email}</p><p>${body.phone}</p><h3>Ordered Parts:</h3><p style="white-space: pre-wrap">${body.parts}</p><h3>Message:</h3><p style="white-space: pre-wrap">${body.comment}</p>`
@@ -61,8 +61,8 @@ export async function POST(request) {
         },
     })
       await transporter.sendMail({
-        from: email,
-        to: email,
+        from: "Sales.infinityaviation@gmail.com",
+        to: "Sales.infinityaviation@gmail.com",
         subject: body.subject,
         text: "A message from infinity website",
         html: `<h2>Company: ${body.company}</h2><p><h3>Customer: ${body.firstName} ${body.lastName}</h3> </p><p>${body.email}</p><p>${body.phone}</p><h4>Message:</h4><p>${body.comment}</p>`
