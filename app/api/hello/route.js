@@ -29,7 +29,7 @@ export async function POST(request) {
         text: "A message from infinity website",
         html: `<h2>Company: ${body.company}</h2><p><h3>Customer: ${body.firstName} ${body.lastName}</h3> </p><p>${body.email}</p><p>${body.phone}</p><h3>Ordered Part: ${body.part}</h3><h3>Quantity: ${body.quantity}</h3><h3>Condition: ${body.condition}</h3><h3>Message:</h3><p style="white-space: pre-wrap">${body.comment}</p>`
       })
-    }else if (body.subject === "Spare parts") {
+    }else if (body.subject === "Multi parts") {
       const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",
       port: 587,
