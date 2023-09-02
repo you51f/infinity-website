@@ -6,7 +6,7 @@ import { sendContactForm } from '../api/send';
 import { POST } from '../api/contact/route';
 import { Footer, Header } from '../components';
 
-const contact = () => {
+const Contact = () => {
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -249,4 +249,4 @@ const contact = () => {
   )
 }
 
-export default contact
+export default Contact

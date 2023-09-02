@@ -4,7 +4,7 @@ import { WorldLocations, Statistics, TeamMember, Footer, Header } from '../compo
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
 
-const about = () => {
+const About = () => {
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -252,4 +252,4 @@ const about = () => {
   )
 }
 
-export default about
+export default About

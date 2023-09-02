@@ -5,7 +5,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
 import { Footer, Header } from '../components';
 
-const aviation = () => {
+const Aviation = () => {
   const [company, setCompany] = useState('');
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
@@ -299,4 +299,4 @@ const aviation = () => {
   )
 }
 
-export default aviation
+export default Aviation

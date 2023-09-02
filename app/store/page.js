@@ -5,7 +5,7 @@ import { BiFilter } from 'react-icons/bi';
 import { BiSolidDownArrow } from 'react-icons/bi';
 import { useState } from 'react'
 
-const store = () => {
+const Store = () => {
   return (
     <div>
         <Advertising/>
@@ -38,4 +38,4 @@ const store = () => {
   )
 }
 
-export default store
+export default Store
