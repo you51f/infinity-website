@@ -3,7 +3,6 @@ import React  from 'react'
 import { Advertising, Product } from '../components'
 import { BiFilter } from 'react-icons/bi';
 import { BiSolidDownArrow } from 'react-icons/bi';
-import { useState } from 'react'
 
 const Store = () => {
   return (

@@ -28,7 +28,7 @@ const TeamMember = () => {
         <div className="member-container3">
           <div className="member-image member3"></div>
           <p className="member-name">Ms. Xie</p>
-          <p className="member-job">Vice President "PV"</p>
+          <p className="member-job">Vice President &apos;PV&apos;</p>
         </div>
         <div className="member-container3">
           <div className="member-image member4"></div>
