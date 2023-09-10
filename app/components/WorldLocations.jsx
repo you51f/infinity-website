@@ -6,6 +6,13 @@ const WorldLocations = () => {
   return (
     <div>
         <div className="location-container">
+            <div className="location-row-main">
+                <div className="location-box">
+                    <IoLocationSharp className="location-icon-main" />
+                    <div className="location-text">United State, 30 N Gould St, STE 4000 Sheridan, WY 82801</div>
+                </div>
+                
+            </div>
             <div className="location-row">
                 <div className="location-box">
                     <IoLocationSharp className="location-icon1" />

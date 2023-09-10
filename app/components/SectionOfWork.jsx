@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const SectionOfWork = () => {
   return (
-    <div className='work-sec track'>
+    <div className='work-sec'>
       <div className='work-sec2'>
       <div className='work-sec-container'>
         <div className="work-sec-text-container">

@@ -15,8 +15,8 @@ const HeroBanner = () => {
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
       '/images/banner1.png',
-      '/images/banner2.png',
-      '/images/banner3.png',
+      // '/images/banner2.png',
+      // '/images/banner3.png',
       '/images/banner4.png'
     ];
     
@@ -43,7 +43,7 @@ const HeroBanner = () => {
           />
         ))}
         <div className='new-banner-text'>
-          <h1 className='banner-text'>INFINITY AVIATION</h1>
+          <h1 className='banner-text'>INFINITY Flight Horizons</h1>
           <span className='banner-space'></span>
           <p className='banner-sub-text'>Take You To Sky</p>
         </div>

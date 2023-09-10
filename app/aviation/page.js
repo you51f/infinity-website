@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import AviationBanner from '../components/AviationBanner'
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
@@ -12,12 +12,19 @@ const Aviation = () => {
   const [lastName, setLastName] = useState('');
   const [dropdownValue, setDropdownValue] = useState('Spare parts');
   const [quantity, setQuantity] = useState('');
+  const [partNumber, setPartNumber] = useState('');
   const [parts, setParts] = useState('');
   const [part, setPart] = useState('');
   const [condition, setCondition] = useState('');
   const [phone, setPhone] = useState('');
   const [comment, setComment] = useState('');
   const [btnValue, setBtnValue] = useState('send');
+
+  const sectionRef = useRef(null);
+
+  const scrollClick = () => {
+    sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  };
 
 
   const onNewSubmit = async(e) => {
@@ -31,6 +38,7 @@ const Aviation = () => {
       subject: dropdownValue,
       quantity: quantity,
       part: part,
+      partNumber: partNumber,
       parts: parts,
       condition: condition,
       phone: phone,
@@ -44,6 +52,7 @@ const Aviation = () => {
     setDropdownValue('');
     setPart('');
     setParts('');
+    setPartNumber('');
     setQuantity('');
     setCondition('');
     setPhone('');
@@ -62,6 +71,7 @@ const Aviation = () => {
     setLastName('');
     setDropdownValue('');
     setPart('');
+    setPartNumber('');
     setQuantity('');
     setCondition('');
     setPhone('');
@@ -82,7 +92,7 @@ const Aviation = () => {
           <p className='left-text-text'>We provide all types of spare parts for aircrafts with all available conditions (Brand NEW, Overhaul, Repaired and As removed).</p>
           <p className='left-text-text'>Spare parts are available rotatable and consumables for wide range of aircraft BOEING, AIRBUS, EMBRAER etc</p>
           <p className='left-text-text'>Connect with our team to get the most suitable parts and deals for you.</p>
-          <button className='sec-btn22'>
+          <button className='sec-btn22' onClick={scrollClick}>
             Order Now
           </button>
         </div>
@@ -106,7 +116,7 @@ const Aviation = () => {
 <p className='left-text-text2'>- Inspection before buying aircrafts, physical and documentation inspection. </p>
 <p className='left-text-text3'>- Set-up of maintenance organization.</p>
           <p className='left-text-text'>Our team operates under the exceptional leadership of Chief Engineer Mohamed Hassanein, who boasts an impressive 30 years of experience in the aviation industry.</p>
-          <button className='sec-btn4'>
+          <button className='sec-btn4' onClick={scrollClick}>
             Get Your consult Now
           </button>
         </div>
@@ -136,7 +146,7 @@ const Aviation = () => {
       </div>
       <div className='aviation-form'>
         {/* heading */}
-      <div className="heading">
+      <div className="heading" ref={sectionRef}>
         <div className='pre-heading'><h3 className='heading-text'>Send Your</h3>&nbsp;<h3 className='heading-text2'>Order</h3></div>
         {/* <h5 className='heading-text-normal'>View All <MdKeyboardArrowRight className='heading-icon'/></h5> */}
       </div>
@@ -204,18 +214,24 @@ const Aviation = () => {
         value={part}
         onChange={(e) => setPart(e.target.value)}
         placeholder="#Part"
-        className="input-part"
+        className="input"
       />
       <div> &nbsp;  &nbsp;  &nbsp; </div>
+      <input
+        type="number"
+        value={partNumber}
+        onChange={(e) => setPartNumber(e.target.value)}
+        placeholder="Part Number"
+        className="input"
+      />
+      </div>
       <input
         type="number"
         value={quantity}
         onChange={(e) => setQuantity(e.target.value)}
         placeholder="Quantity"
-        className="input-quantity"
+        className="input conditional-field "
       />
-      </div>
-   
     
       <input
         type="text"

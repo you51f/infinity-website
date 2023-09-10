@@ -23,8 +23,8 @@ const Footer = () => {
           <div className="footer-contact-sub sub-pad">sales.infinityaviation@gmail.com</div>
           <div className="footer-contact"><BiPhoneCall className='footer-contact-icon'/>&nbsp;Call us</div>
           <div className="footer-contact-sub">SD: +249 96 186 1369</div>
-          <div className="footer-contact-sub">EG: +201 03 089 1184</div>
-          <div className="footer-contact-sub sub-pad">MY: +601 17 007 1557</div>
+          <div className="footer-contact-sub">EG: +20 103 089 1184</div>
+          <div className="footer-contact-sub sub-pad">MY: +60 117 007 1557</div>
           <div className="footer-contact">Follow us on:</div>
           <div className="footer-follow-icons">
             <Link href="https://www.instagram.com/infinity_stooore?r=nametag" target="_blank"><AiOutlineInstagram  className='icon-space-footer'/></Link>

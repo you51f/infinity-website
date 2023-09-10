@@ -13,6 +13,7 @@ const Contact = () => {
   const [lastName, setLastName] = useState('');
   const [dropdownValue, setDropdownValue] = useState('Customized order');
   const [quantity, setQuantity] = useState('');
+  const [partNumber, setPartNumber] = useState('');
   const [part, setPart] = useState('');
   const [parts, setParts] = useState('');
   const [condition, setCondition] = useState('');
@@ -30,6 +31,7 @@ const Contact = () => {
       lastName: lastName,
       subject: dropdownValue,
       quantity: quantity,
+      partNumber: partNumber,
       part: part,
       parts: parts,
       condition: condition,
@@ -45,6 +47,7 @@ const Contact = () => {
     setPart('');
     setParts('');
     setQuantity('');
+    setPartNumber('');
     setCondition('');
     setPhone('');
     setComment('');
@@ -76,6 +79,7 @@ const Contact = () => {
     setDropdownValue('');
     setPart('');
     setQuantity('');
+    setPartNumber('');
     setCondition('');
     setPhone('');
     setComment('');
@@ -153,20 +157,26 @@ const Contact = () => {
         type="text"
         value={part}
         onChange={(e) => setPart(e.target.value)}
-        placeholder="#Part"
-        className="input-part"
+        placeholder="Part Description"
+        className="input"
       />
       <div> &nbsp;  &nbsp;  &nbsp; </div>
+      <input
+        type="number"
+        value={partNumber}
+        onChange={(e) => setPartNumber(e.target.value)}
+        placeholder="Part Number"
+        className="input"
+      />
+      </div>
+   
       <input
         type="number"
         value={quantity}
         onChange={(e) => setQuantity(e.target.value)}
         placeholder="Quantity"
-        className="input-quantity"
+        className="input conditional-field "
       />
-      </div>
-   
-    
       <input
         type="text"
         value={condition}
@@ -178,7 +188,7 @@ const Contact = () => {
         type="text"
         value={parts}
         onChange={(e) => setParts(e.target.value)}
-        placeholder="Write your order of spare parts here with '/' between orders"
+        placeholder="Write your order of spare parts with there part number and quantity here with '/' between orders"
         className="input conditional-field2"
         style={{ height: '250px' }}
       />
