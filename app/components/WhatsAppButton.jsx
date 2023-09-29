@@ -10,7 +10,7 @@ const WhatsAppButton = () => {
     //       <img alt="WhatsApp Icon" />
     //     </a>
     //   </Link>
-      <Link href="https://wa.me/+249961861369" target="_blank" className='whatsapp-button'><AiOutlineWhatsApp  className='whatsapp-button_img'/><div><h6>Whatsapp</h6><p className='whatsapp-number'>+249 96 186 1369</p></div></Link>
+      <Link href="https://wa.me/+249961861369" target="_blank" className='whatsapp-button'><AiOutlineWhatsApp  className='whatsapp-button_img'/><div><h6>Whatsapp</h6><p className='whatsapp-number'>Live chat</p></div></Link>
     );
   };
   
