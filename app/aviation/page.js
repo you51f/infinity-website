@@ -3,7 +3,7 @@ import React, { useRef, useState } from 'react'
 import AviationBanner from '../components/AviationBanner'
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
-import { Footer, Header } from '../components';
+import { Footer, Header, WhatsAppButton } from '../components';
 
 const Aviation = () => {
   const [company, setCompany] = useState('');
@@ -310,6 +310,7 @@ const Aviation = () => {
       </div>
       </div>
       <Footer/>
+      <WhatsAppButton/>
      
     </div>
   )

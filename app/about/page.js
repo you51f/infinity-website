@@ -1,6 +1,6 @@
 "use client"
 import React, {useState} from 'react'
-import { WorldLocations, Statistics, TeamMember, Footer, Header } from '../components'
+import { WorldLocations, Statistics, TeamMember, Footer, Header, WhatsAppButton } from '../components'
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
 
@@ -90,6 +90,7 @@ const About = () => {
       <WorldLocations/>
       <TeamMember/>
       <Footer/>
+      <WhatsAppButton/>
     </div>
   )
 }

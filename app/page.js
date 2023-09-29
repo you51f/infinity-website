@@ -2,7 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { MdKeyboardArrowRight } from 'react-icons/md';
-import { Header, HeroBanner, Service, Product, SectionOfWork, Footer, Advertising, TeamMember, Supplier } from './components'
+import { Header, HeroBanner, Service, Product, WhatsAppButton, SectionOfWork, Footer, Advertising, TeamMember, Supplier } from './components'
 
 
 export default function Home() {
@@ -17,12 +17,13 @@ export default function Home() {
         <h5 className='heading-text-normal'>View All <MdKeyboardArrowRight className='heading-icon'/></h5>
       </div>
       {/* heading */}
-      {/* <Product/> */}
+      {/* <Product/> */} 
       <Advertising/>
       <Service />
       <TeamMember/>
       <Supplier/>
       <Footer/>
+      <WhatsAppButton />
     </main>
   ) 
 }
