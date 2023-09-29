@@ -1438,24 +1438,28 @@
 
             .whatsapp-button {
               position: fixed;
-              bottom: 30px;
+              bottom: 20px;
               right: 0px;
-              width: 75px;
-              height: 60px;
+              width: 120px;
+              height: 50px;
               background-color: rgb(55, 161, 55);
               border-top-left-radius: 50px;
               border-bottom-left-radius: 50px;
               display: flex;
               color: white;
-              justify-content: flex-start; 
+              justify-content: space-around; 
               align-items: center;
-              padding-left: 20px;
+              padding-left: 8px;
               z-index: 10;
             }
           
             .whatsapp-button_img {
-              width: 40px;
+              width: 30px;
               height: auto;
+            }
+
+            .whatsapp-number {
+              font-size: 8px;
             }
 
 
