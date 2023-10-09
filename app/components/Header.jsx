@@ -23,10 +23,10 @@ const Header = () => {
     <div>
         <div className='header-container'>
             <div className='header-logo'></div>
-            <div className='header-text center headerx'><BiPhoneCall className='icons-header-color'/> SD: +249 96 186 1369 &nbsp; | &nbsp; <HiOutlineMail className='icons-header-color'/> sales.infinityaviation@gmail.com</div>
+            <div className='header-text center headerx'><BiPhoneCall className='icons-header-color'/> SD: +249 96 186 1369 &nbsp; | &nbsp; <HiOutlineMail className='icons-header-color'/> sales@infinitycoltd.com</div>
             <div className='header-show'>
                 <div className='header-text center '><BiPhoneCall className='icons-header-color'/> SD: +249 96 186 1369</div>
-                <div className='header-text center '><HiOutlineMail className='icons-header-color'/> sales.infinityaviation@gmail.com</div>
+                <div className='header-text center '><HiOutlineMail className='icons-header-color'/> sales@infinitycoltd.com</div>
             </div>
             <Link href={'/about'} className='header-text info'><AiOutlineInfoCircle className='icons-header-color'/></Link>
             {/* <div className='header-text'><AiOutlineShoppingCart className='icons-header-color'/></div> */}

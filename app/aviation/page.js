@@ -160,7 +160,7 @@ const Aviation = () => {
             Get Your consult Now
           </button> */}
           <div className="footer-contact"><HiOutlineMail className='footer-contact-icon'/>&nbsp;Email</div>
-          <div className="footer-contact-sub sub-pad">sales.infinityaviation@gmail.com</div>
+          <div className="footer-contact-sub sub-pad">sales@infinitycoltd.com</div>
           <p className="footer-contact-sub2">Please fill out the form and our team will contact you shortly.</p>
         </div>
         <div className='right-form'>
