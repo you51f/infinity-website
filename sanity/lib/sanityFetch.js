@@ -4,7 +4,8 @@ import "server-only";
 const DEFAULT_PARAMS = {};
 const DEFAULT_TAGS = [];
 
-export const token = process.env.NEXT_PUBLIC_SANITY_TOKEN;
+export const token = '';
+// export const token = process.env.NEXT_PUBLIC_SANITY_TOKEN;
 
 export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT_TAGS) {
   // const isDraftMode = draftMode().isEnabled;
