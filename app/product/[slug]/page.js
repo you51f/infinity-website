@@ -9,17 +9,17 @@ import Image from 'next/image';
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { Footer, Header } from '@/app/components';
 
-export async function generateStaticParams() {
-  // Important, use the plain Sanity Client here
-  // .const products = await client.fetch(productPathsQuery);
+// export async function generateStaticParams() {
+//   // Important, use the plain Sanity Client here
+//   // .const products = await client.fetch(productPathsQuery);
 
-  return products;
-}
+//   return products;
+// }
 
 export default async function ProductDetails ({ params }) {
   // const product = await sanityFetch(productQuery, params);
   // const { image, name, details, price } = product;
-  // const builder = imageUrlBuilder(client);
+  // const builder = imageUrlBuilder(client); 
   
   return (
     <div>

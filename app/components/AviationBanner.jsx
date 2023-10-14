@@ -15,7 +15,7 @@ const AviationBanner = () => {
       return () => {
         clearInterval(timer);
       };
-    }, []);
+    }, []); 
   
     return (
       <div className="slider-container aviation">

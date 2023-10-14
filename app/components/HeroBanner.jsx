@@ -11,7 +11,7 @@ const HeroBanner = () => {
     //     </div>
        
     //   </div>
-    // </div>
+    // </div> 
     
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
