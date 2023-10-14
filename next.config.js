@@ -3,6 +3,14 @@ const nextConfig = {
     experimental: {
         appDir: true,
       },
+      images: {
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'cdn.sanity.io',
+          },
+        ],
+      },
   //     webpack5: true,
   //   webpack: (config) => {
   //   config.resolve.fallback = { fs: false };

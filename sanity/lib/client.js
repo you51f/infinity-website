@@ -1,8 +1,8 @@
-import { createClient } from 'next-sanity'
+import sanityClient from '@sanity/client';
 
 import { apiVersion, dataset, projectId, useCdn } from '../env'
 
-export const client = createClient({
+export const client = sanityClient({
   apiVersion,
   dataset,
   projectId,

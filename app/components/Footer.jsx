@@ -1,3 +1,4 @@
+"use client"
 import React, {useState} from 'react'
 import { BiPhoneCall } from 'react-icons/bi';
 import { HiOutlineMail } from 'react-icons/hi';
