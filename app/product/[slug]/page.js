@@ -11,22 +11,22 @@ import { Footer, Header } from '@/app/components';
 
 export async function generateStaticParams() {
   // Important, use the plain Sanity Client here
-  const products = await client.fetch(productPathsQuery);
+  // .const products = await client.fetch(productPathsQuery);
 
   return products;
 }
 
 export default async function ProductDetails ({ params }) {
-  const product = await sanityFetch(productQuery, params);
-  const { image, name, details, price } = product;
-  const builder = imageUrlBuilder(client);
+  // const product = await sanityFetch(productQuery, params);
+  // const { image, name, details, price } = product;
+  // const builder = imageUrlBuilder(client);
   
   return (
     <div>
       <Header/>
       <div className="product-detail-container">
         <div>
-          <div className="image-container">
+          {/* <div className="image-container">
             <Image
              src={builder.image(image && image[0]).width(300).height(300).url()} 
              width={180}
@@ -34,7 +34,7 @@ export default async function ProductDetails ({ params }) {
             className="product-detail-image"
             alt={image[0]?.alt}
               />
-          </div>
+          </div> */}
           {/* <div className="small-images-container">
             {image?.map((item, i) => (
               <img 
@@ -47,20 +47,8 @@ export default async function ProductDetails ({ params }) {
           </div> */}
         </div>
 
-        <div className="product-detail-desc">
+        {/* <div className="product-detail-desc">
           <h1>{name}</h1>
-          {/* <div className="reviews">
-            <div>
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiFillStar />
-              <AiOutlineStar />
-            </div>
-            <p>
-              (20)
-            </p>
-          </div> */}
           <h4>Details: </h4>
           <p>{details}</p>
           <p className="price">${price}</p>
@@ -76,7 +64,7 @@ export default async function ProductDetails ({ params }) {
             <button type="button" className="add-to-cart" >Add to Cart</button>
             <button type="button" className="buy-now" >Buy Now</button>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* <div className="maylike-products-wrapper">
