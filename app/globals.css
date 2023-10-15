@@ -1359,6 +1359,14 @@
               border-radius: 4px;
               margin-bottom: 0.3rem;
             }
+            .input-code{
+              width: 45%;
+              padding: 1rem;
+              font-size: 1rem;
+              border: 1px solid lightgray;
+              border-radius: 4px;
+              margin-bottom: 0.3rem;
+            }
             .input-quantity{
               width: 30%;
               padding: 1rem;

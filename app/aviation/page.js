@@ -17,6 +17,7 @@ const Aviation = () => {
   const [part, setPart] = useState('');
   const [condition, setCondition] = useState('');
   const [phone, setPhone] = useState('');
+  const [code, setCode] = useState('');
   const [comment, setComment] = useState('');
   const [btnValue, setBtnValue] = useState('send');
 
@@ -42,6 +43,7 @@ const Aviation = () => {
       parts: parts,
       condition: condition,
       phone: phone,
+      code: code,
       comment: comment
     }
     await sendContactForm(data)
@@ -56,6 +58,7 @@ const Aviation = () => {
     setQuantity('');
     setCondition('');
     setPhone('');
+    setCode('');
     setComment('');
     setBtnValue('send');
   }
@@ -270,13 +273,24 @@ const Aviation = () => {
         placeholder="Email"
         className="input"
       />
+      </div>
+      <div className='form-row'>
+      <input
+        type="text"
+        value={code}
+        onChange={(e) => setCode(e.target.value)}
+        placeholder="+(Country code)"
+        className="input-code"
+        required
+      />
       <div> &nbsp;  &nbsp;  &nbsp; </div>
       <input
         type="number"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
-        placeholder="Phone"
+        placeholder="Phone number"
         className="input"
+        required
       />
       </div>
     
