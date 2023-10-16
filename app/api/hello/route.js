@@ -9,7 +9,7 @@ import nodemailer from 'nodemailer';
 export async function POST(request) {
   const body = await request.json()
   // console.log(body);
-  try {
+  try { 
     if (body.subject === "Spare parts") {
       const transporter = nodemailer.createTransport({
         host: "smtp.gmail.com",

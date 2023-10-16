@@ -32,7 +32,7 @@ const Header = () => {
             <Link href={'/about'} className='header-text info'><AiOutlineInfoCircle className='icons-header-color'/></Link>
             {/* <div className='header-text'><AiOutlineShoppingCart className='icons-header-color'/></div> */}
             
-        </div>
+        </div> 
         <div className='header-container2 ripplex'>
            
             <Link href='/' className={pathname === '/' ? 'main-ripple' : 'ripple'}  >Home</Link>

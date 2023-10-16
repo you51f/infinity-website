@@ -13,7 +13,7 @@ export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT
     throw new Error(
       "The `SANITY_API_READ_TOKEN` environment variable is required."
     );
-  } 
+  }  
   const isDevelopment = process.env.NODE_ENV === "development";
 
   return client

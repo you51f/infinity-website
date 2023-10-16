@@ -23,7 +23,7 @@ export default async function Store () {
         {/* <h5 className='heading-text-normal'>View All <MdKeyboardArrowRight className='heading-icon'/></h5> */}
       </div>
       {/* heading */}
-
+ 
       <div className="product-container">
         {products.map((product) => <div className="product-position"><Product key={product._id} product={product}/></div>)}
       </div>
