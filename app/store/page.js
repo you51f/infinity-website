@@ -22,7 +22,7 @@ export default async function Store () {
         <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>Desktop Decoration</h3></div>
         {/* <h5 className='heading-text-normal'>View All <MdKeyboardArrowRight className='heading-icon'/></h5> */}
       </div>
-      {/* heading */}
+      {/* heading */} 
  
       <div className="product-container">
         {products.map((product) => <div className="product-position"><Product key={product._id} product={product}/></div>)}

@@ -8,4 +8,4 @@ export const client = sanityClient({
   projectId,
   useCdn,
 })
- 
+  

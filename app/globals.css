@@ -759,7 +759,7 @@
             } */ 
             .product-box {
               width: 180px;
-              height: 250px;
+              height: 250px; 
               margin-right: 10px;
               border-radius: 16px;
               display: flex;

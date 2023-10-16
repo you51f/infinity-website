@@ -20,7 +20,7 @@ const Product = ({product: { image, name, slug, price }}) => {
             // src={builder.image(post.mainImage).width(300).height(300).url()} 
             // src={urlFor( image && image[0])} 
             width={180}
-            height={140} 
+            height={140}  
             className="productImage"
             alt={image[0]?.alt}
             />

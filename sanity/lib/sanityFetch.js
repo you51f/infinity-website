@@ -8,7 +8,7 @@ const DEFAULT_TAGS = [];
 export const token = process.env.NEXT_PUBLIC_SANITY_TOKEN;
 
 export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT_TAGS) {
-  // const isDraftMode = draftMode().isEnabled;
+  // const isDraftMode = "";
   if (!token) {
     throw new Error(
       "The `SANITY_API_READ_TOKEN` environment variable is required."
@@ -18,8 +18,8 @@ export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT
 
   return client
     .withConfig({ useCdn: true })
-    .fetch(query, params, {
-      cache: isDevelopment || isDraftMode ? undefined : "force-cache",
+    .fetch(query, params, { 
+      cache: isDevelopment ? undefined : "force-cache",
       ...({
         token: token,
         perspective: "previewDrafts",

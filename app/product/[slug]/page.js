@@ -27,7 +27,7 @@ export default async function ProductDetails ({ params }) {
       <Header/>
       <ProductInfo product={product}/>
       {/* <div className="product-detail-container">
-        <div> 
+        <div>  
           <div className="image-container">
             <img
              src={builder.image(image && image[0]).width(300).height(300).url()} 

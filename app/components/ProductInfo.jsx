@@ -53,7 +53,7 @@ const ProductInfo = ({product: { image, name, details, price }}) => {
           </div> */}
         </div>
       </div>
-    </div> 
+    </div>  
   )
 }
 
