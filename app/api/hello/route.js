@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server'
 import nodemailer from 'nodemailer';
 
 
-const email = "you51felbalaa@gmail.com";
-const password = "imcqouyaykhjtttc";
+
+// const password = "imcqouyaykhjtttc";
 
 
 export async function POST(request) {
@@ -17,7 +17,7 @@ export async function POST(request) {
       secure: false,
         auth: {
             user: "Consulting.infinityaviation@gmail.com",
-            pass: "tgyfqeorwxohjnue"
+            pass: process.env.NODE_MAILER_PASS_CONSULTING
             // user: email,
             // pass: password
         },
@@ -36,7 +36,7 @@ export async function POST(request) {
       secure: false,
         auth: {
             user: "Consulting.infinityaviation@gmail.com",
-            pass: "tgyfqeorwxohjnue"
+            pass: process.env.NODE_MAILER_PASS_CONSULTING
             // user: email,
             // pass: password
         },
@@ -55,7 +55,7 @@ export async function POST(request) {
       secure: false,
         auth: {
             user: "Sales.infinityaviation@gmail.com",
-            pass: "fywqwhcxrubckben"
+            pass: process.env.NODE_MAILER_PASS_SALES
             // user: email,
             // pass: password
         },

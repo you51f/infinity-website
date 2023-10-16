@@ -29,7 +29,7 @@ const Product = ({product: { image, name, slug, price }}) => {
             <h5 >{name}</h5>
             <h5 >${price}</h5>
           </div>
-          <div className='product-btn'>Add to Cart</div>
+          <div className='product-btn'>More Details</div>
         </div>
       </Link>  
     </div>

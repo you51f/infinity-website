@@ -36,7 +36,7 @@ const Header = () => {
         <div className='header-container2 ripplex'>
            
             <Link href='/' className={pathname === '/' ? 'main-ripple' : 'ripple'}  >Home</Link>
-            {/* <Link href='/store' className={pathname === '/store' ? 'main-ripple' : 'ripple'}  >Infinity Store</Link> */}
+            <Link href='/store' className={pathname === '/store' ? 'main-ripple' : 'ripple'}  >Infinity Store</Link>
             <Link href='/aviation' className={pathname === '/aviation' ? 'main-ripple' : 'ripple'}  >Infinity Aviation</Link>
             <Link href='/contact' className={pathname === '/contact' ? 'main-ripple' : 'ripple'}  >Contact</Link>
             <Link href='/about' className={pathname === '/about' ? 'main-ripple' : 'ripple'}  >About Us</Link>

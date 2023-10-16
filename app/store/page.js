@@ -9,7 +9,7 @@ import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import { productsQuery } from '@/sanity/lib/queries';
 
 export default async function Store () {
-  // const products = await sanityFetch(productsQuery); 
+  const products = await sanityFetch(productsQuery); 
   return (
     <div>
       <Header/>
@@ -24,9 +24,9 @@ export default async function Store () {
       </div>
       {/* heading */}
 
-      {/* <div className="product-container">
-        {products?.map((product) => <Product key={product._id} product={product}/>)}
-      </div> */}
+      <div className="product-container">
+        {products.map((product) => <div className="product-position"><Product key={product._id} product={product}/></div>)}
+      </div>
       <Footer/>
       <WhatsAppButton/>
     </div>
