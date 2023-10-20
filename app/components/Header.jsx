@@ -51,14 +51,14 @@ const Header = () => {
             <Link href='/store' className={pathname === '/store' ? 'main-ripple' : 'ripple'}  >Infinity Store</Link>
             <Link href='/aviation' className={pathname === '/aviation' ? 'main-ripple' : 'ripple'}  >Infinity Aviation</Link>
             <Link href='/contact' className={pathname === '/contact' ? 'main-ripple' : 'ripple'}  >Contact</Link>
-            <Link href='/about' className={pathname === '/about' ? 'main-ripple' : 'ripple'}  >About Us</Link>
+            {/* <Link href='/about' className={pathname === '/about' ? 'main-ripple' : 'ripple'}  >About Us</Link> */}
 
             </div>
-            {/* <div className='ripple-row'>
+            <div className='ripple-row'>
                
             <Link href='/about' className={pathname === '/about' ? 'main-ripple' : 'ripple'}  >About Us</Link>
 
-            </div> */}
+            </div>
         </div>
         {showCart && <Cart />}
     </div>
