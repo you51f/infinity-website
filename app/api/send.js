@@ -7,3 +7,14 @@ export const sendContactForm = async (data) =>
             Accept: "application/json",
         }
     })
+
+
+export const sendDataForStripe = async (data) =>
+    fetch("/api/stripe", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        }
+    })

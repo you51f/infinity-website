@@ -12,3 +12,4 @@ export { default as AnimatedNumber } from "./AnimatedNumber";
 export { default as WorldLocations } from "./WorldLocations";
 export { default as WhatsAppButton } from "./WhatsAppButton";
 export { default as ProductInfo } from "./ProductInfo";
+export { default as Cart } from "./Cart";

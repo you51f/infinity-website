@@ -3,20 +3,31 @@ import { client } from '@/sanity/lib/client';
 import React, { useState } from 'react'
 import imageUrlBuilder from "@sanity/image-url";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
+import { useStateContext } from '../context/StateContext';
+import { urlForImage } from '@/sanity/lib/image';
 
 
 
 
-const ProductInfo = ({product: { image, name, details, price }}) => {
+const ProductInfo = ({product}) => {
+  const { image, name, details, price } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
+    const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
+    const handleBuyNow = () => {
+      onAdd(product, qty);
+  
+      setShowCart(true);
+    }
+
   return (
     <div>
         <div className="product-detail-container">
         <div>
           <div className="image-container">
             <img
-             src={builder.image(image && image[index]).width(300).height(300).url()} 
+             src={urlForImage(image[index])} 
              
             className="product-detail-image"
             alt={image[0]?.alt}
@@ -42,15 +53,15 @@ const ProductInfo = ({product: { image, name, details, price }}) => {
           {/* <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc">
-              <span className="minus"><AiOutlineMinus /></span>
-              <span className="num">0</span>
-              <span className="plus" ><AiOutlinePlus /></span>
+              <span className="minus" onClick={decQty}><AiOutlineMinus /></span>
+              <span className="num">{qty}</span>
+              <span className="plus" onClick={incQty}><AiOutlinePlus /></span>
             </p>
-          </div>
-          <div className="buttons">
-            <button type="button" className="add-to-cart" >Add to Cart</button>
-            <button type="button" className="buy-now" >Buy Now</button>
           </div> */}
+          <div className="buttons">
+          <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
+            <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button>
+          </div>
         </div>
       </div>
     </div>  

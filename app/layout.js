@@ -1,6 +1,7 @@
 
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { StateContext } from './context/StateContext'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,7 +23,8 @@ export default function RootLayout({ children }) {
       <body>
       <main className={inter.className}>
       
-        {children}
+        {/* {children} */}
+        <StateContext>{children}</StateContext>
     
         </main>
       </body>
