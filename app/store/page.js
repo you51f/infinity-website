@@ -9,7 +9,8 @@ import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import { productsQuery } from '@/sanity/lib/queries';
 
 export default async function Store () {
-  const products = await sanityFetch(productsQuery); 
+  const revalidate = 60
+  const products = await sanityFetch(productsQuery, {next: {revalidate}}); 
   return (
     <div>
       <Header/>
