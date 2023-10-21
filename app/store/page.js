@@ -9,8 +9,7 @@ import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import { productsQuery } from '@/sanity/lib/queries';
 
 export default async function Store () {
-  const revalidate = 60
-  const products = await sanityFetch(productsQuery, {next: {revalidate}}); 
+  const products = await sanityFetch(productsQuery); 
   return (
     <div>
       <Header/>
@@ -33,6 +32,8 @@ export default async function Store () {
     </div>
   )
 };
+
+export const revalidate = 30;
 
 // export const getServerSideProps = async () => {
 //   const query = '*[_type == "product"]';
