@@ -3,8 +3,8 @@ import React , { useState, useEffect } from 'react'
 const AviationBanner = () => {
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
-      '/images/avbanner1.png',
-      '/images/avbanner2.png'
+      '/images/avbanner1.webp',
+      '/images/avbanner2.webp'
     ];
   
     useEffect(() => {

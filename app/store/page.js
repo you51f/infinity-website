@@ -16,7 +16,7 @@ export default async function Store () {
         <Advertising/>
         {/* <button className='filter-btn'>
             <BiFilter className='filter-icon'/> Categories.All <BiSolidDownArrow/>
-          </button> */}
+          </button> */} 
         {/* heading */}
       <div className="heading">
         <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>Desktop Decoration</h3></div>

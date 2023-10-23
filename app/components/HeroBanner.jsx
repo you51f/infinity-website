@@ -15,11 +15,11 @@ const HeroBanner = () => {
     
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
-      '/images/banner1.png',
+      '/images/banner1.webp',
       // '/images/banner2.png',
       // '/images/banner3.png',
-      '/images/banner4.png',
-      '/images/banner55.png'
+      '/images/banner4.webp',
+      '/images/banner55.webp'
     ];
     
     useEffect(() => {

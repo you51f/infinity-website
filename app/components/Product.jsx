@@ -12,7 +12,7 @@ const builder = imageUrlBuilder(client);
 const Product = ({product: { image, name, slug, price }}) => {
   return (
     <div>
-      <Link href={`/product/${slug.current}`}>
+      <Link href={`/product/${slug?.current}`}>
         <div className='product-box'>
           {image[0] ? (
             <Image
