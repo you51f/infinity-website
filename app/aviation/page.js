@@ -2,6 +2,7 @@
 import React, { useRef, useState } from 'react'
 import AviationBanner from '../components/AviationBanner'
 import { HiOutlineMail } from 'react-icons/hi';
+import { AiOutlinePlus } from 'react-icons/ai';
 import { sendContactForm } from '../api/send';
 import { Footer, Header, WhatsAppButton } from '../components';
 
@@ -26,6 +27,16 @@ const Aviation = () => {
   const scrollClick = () => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
+
+  // const handleChange = (e) => {
+  //   const newValue = e.target.value
+  //   if (!newValue.startsWith('+')) {
+  //     // Append "+" to the beginning of the value
+  //     setCode(`${newValue}`);
+  //   }else {
+  //     setCode(`+${newValue}`);
+  //   }
+  // };
 
 
   const onNewSubmit = async(e) => {
@@ -274,18 +285,19 @@ const Aviation = () => {
         className="input"
       />
       </div>
-      <div className='form-row'>
+      <div className='form-row-code'>
+        <AiOutlinePlus className='plus-form'/>
       <input
-        type="tel"
+        type="number"
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        placeholder="+(Country code)"
+        placeholder="Country code"
         className="input-code"
         required
       />
       <div> &nbsp;  &nbsp;  &nbsp; </div>
       <input
-        type="tel"
+        type="number"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         placeholder="Phone number"

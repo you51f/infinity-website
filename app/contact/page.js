@@ -2,6 +2,7 @@
 import React, { useState } from 'react'
 import AviationBanner from '../components/AviationBanner'
 import { HiOutlineMail } from 'react-icons/hi';
+import { AiOutlinePlus } from 'react-icons/ai';
 import { sendContactForm } from '../api/send';
 import { POST } from '../api/contact/route';
 import { Footer, Header, WhatsAppButton } from '../components';
@@ -218,12 +219,13 @@ const Contact = () => {
         required
       />
       </div>
-      <div className='form-row'>
+      <div className='form-row-code'>
+        <AiOutlinePlus className='plus-form'/>
       <input
         type="tel"
         value={code}
         onChange={(e) => setCode(e.target.value)}
-        placeholder="+(Country code)"
+        placeholder="Country code"
         className="input-code"
         required
       />

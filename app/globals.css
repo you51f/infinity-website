@@ -1618,6 +1618,16 @@
               flex-direction: row;
               width: 100%;
             }
+            .form-row-code {
+              display: flex;
+              flex-direction: row;
+              width: 100%;
+              align-items: center;
+              justify-content: center;
+            }
+            .plus-form {
+              font-size: 30px;
+            }
             
             .input {
               width: 100%;
