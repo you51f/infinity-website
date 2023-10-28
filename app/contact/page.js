@@ -222,7 +222,7 @@ const Contact = () => {
       <div className='form-row-code'>
         <AiOutlinePlus className='plus-form'/>
       <input
-        type="tel"
+        type="number"
         value={code}
         onChange={(e) => setCode(e.target.value)}
         placeholder="Country code"
@@ -231,7 +231,7 @@ const Contact = () => {
       />
       <div> &nbsp;  &nbsp;  &nbsp; </div>
       <input
-        type="tel"
+        type="number"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         placeholder="Phone number"
