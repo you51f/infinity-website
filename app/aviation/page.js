@@ -221,7 +221,7 @@ const Aviation = () => {
       />
       <div> &nbsp;  &nbsp;  &nbsp; </div>
       <input
-        type="number"
+        type="text"
         value={partNumber}
         onChange={(e) => setPartNumber(e.target.value)}
         placeholder="Part Number"
@@ -276,7 +276,7 @@ const Aviation = () => {
       </div>
       <div className='form-row'>
       <input
-        type="text"
+        type="tel"
         value={code}
         onChange={(e) => setCode(e.target.value)}
         placeholder="+(Country code)"
@@ -285,7 +285,7 @@ const Aviation = () => {
       />
       <div> &nbsp;  &nbsp;  &nbsp; </div>
       <input
-        type="number"
+        type="tel"
         value={phone}
         onChange={(e) => setPhone(e.target.value)}
         placeholder="Phone number"
