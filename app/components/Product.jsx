@@ -9,7 +9,7 @@ import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(client);
 
-const Product = ({product: { image, name, slug, price }}) => {
+const Product = ({product: { image, name, slug, price, category }}) => {
   return (
     <div>
       <Link href={`/product/${slug?.current}`}>

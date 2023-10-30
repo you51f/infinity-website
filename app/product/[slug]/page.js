@@ -18,7 +18,7 @@ import { Footer, Header, ProductInfo } from '@/app/components';
 
 export default async function ProductDetails ({ params }) {
   const product = await sanityFetch(productQuery, params);
-  const { image, name, details, price } = product;
+  const { image, name, details, price, category } = product;
   const builder = imageUrlBuilder(client); 
   // const [index, setIndex] = useState(0);
   

@@ -10,7 +10,7 @@ import { urlForImage } from '@/sanity/lib/image';
 
 
 const ProductInfo = ({product}) => {
-  const { image, name, details, price } = product;
+  const { image, name, details, price, category } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();

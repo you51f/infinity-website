@@ -14,13 +14,13 @@ export default function Home() {
       {/* heading */}
       <div className="heading">
         <div className='pre-heading'><h3 className='heading-text'>Get unique stuff from our</h3>&nbsp;<h3 className='heading-text2'>Infinity Store</h3></div>
-        <h5 className='heading-text-normal'>View All <MdKeyboardArrowRight className='heading-icon'/></h5>
+        <Link href="/store"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
       </div>
       {/* heading */}
       {/* <Product/> */} 
       <Advertising/>
       <Service />
-      <TeamMember/>
+      {/* <TeamMember/> */}
       <Supplier/>
       <Footer/>
       <WhatsAppButton />
