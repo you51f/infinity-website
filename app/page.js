@@ -12,16 +12,16 @@ export default function Home() {
       <HeroBanner/>
       <SectionOfWork/>
       {/* heading */}
-      <div className="heading">
+      {/* <div className="heading">
         <div className='pre-heading'><h3 className='heading-text'>Get unique stuff from our</h3>&nbsp;<h3 className='heading-text2'>Infinity Store</h3></div>
         <Link href="/store"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
-      </div>
+      </div> */}
       {/* heading */}
       {/* <Product/> */} 
-      <Advertising/>
-      <Service />
+      {/* <Advertising/> */}
+      {/* <Service /> */}
       {/* <TeamMember/> */}
-      <Supplier/>
+      {/* <Supplier/> */}
       <Footer/>
       <WhatsAppButton />
     </main>

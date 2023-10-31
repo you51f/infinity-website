@@ -40,6 +40,28 @@ export default {
         name: 'category',
         title: 'Category',
         type: 'string',
+      },
+      { 
+        name: 'sizes',
+        title: 'Product Sizes',
+        type: 'array',
+        of: [
+          {
+            type: 'object',
+            fields: [
+              {
+                name: 'size',
+                title: 'Size',
+                type: 'string'
+              },
+              {
+                name: 'addedprice',
+                title: 'Added price',
+                type: 'number'
+              }
+            ]
+          }
+        ]
       }
     ]
   } 

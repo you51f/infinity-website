@@ -10,13 +10,19 @@ import { urlForImage } from '@/sanity/lib/image';
 
 
 const ProductInfo = ({product}) => {
-  const { image, name, details, price, category } = product;
+  const { image, name, details, price, category, sizes } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
+    const [sizeIndex, setSizeIndex] = useState(0);
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
+    var sizeNum = 0
     const handleBuyNow = () => {
-      onAdd(product, qty);
+      const sentProduct = {...product}
+      sentProduct.name = `${sentProduct.name} - ${sentProduct.sizes[sizeIndex].size}`
+      sentProduct.price = sentProduct.price + sentProduct.sizes[sizeIndex].addedprice
+
+      onAdd(sentProduct, qty);
   
       setShowCart(true);
     }
@@ -46,10 +52,10 @@ const ProductInfo = ({product}) => {
         </div>
 
         <div className="product-detail-desc">
-          <h1>{name}</h1>
+          <h1>{name} - {sizes[sizeIndex].size}</h1>
           <h4>Details: </h4>
           <p>{details}</p>
-          <p className="price">${price}</p>
+          <p className="price">${price + sizes[sizeIndex].addedprice}</p>
           {/* <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc">
@@ -58,12 +64,28 @@ const ProductInfo = ({product}) => {
               <span className="plus" onClick={incQty}><AiOutlinePlus /></span>
             </p>
           </div> */}
+          <h4 className='size'>Sizes: </h4>
+          <div className='size-container'>
+          {
+            sizes?.map((item, i) => {
+              sizeNum = 1
+              return <button key={i} onClick={() => {setSizeIndex(i)}} className={i === sizeIndex ? 'size-box-selected' : 'size-box-normal'}>{item.size}</button>
+            })
+          }
+          </div>
           <div className="buttons">
           <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
             <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button>
           </div>
         </div>
       </div>
+      <style>{`
+        
+        .size {
+          display: ${sizeNum != 0 ? 'flex' : 'none'};
+        }
+        
+      `}</style>
     </div>  
   )
 }
