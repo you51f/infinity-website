@@ -19,12 +19,20 @@ const ProductInfo = ({product}) => {
     var sizeNum = 0
     const handleBuyNow = () => {
       const sentProduct = {...product}
-      sentProduct.name = `${sentProduct.name} - ${sentProduct.sizes[sizeIndex].size}`
-      sentProduct.price = sentProduct.price + sentProduct.sizes[sizeIndex].addedprice
+      sentProduct.name = `${sentProduct.name} ${sentProduct.sizes && sentProduct.sizes[sizeIndex]?.size && `- ${sentProduct.sizes[sizeIndex].size}`}`
+      sentProduct.price = sentProduct.price + (sentProduct.sizes && sentProduct.sizes[sizeIndex]?.addedprice || 0)
 
       onAdd(sentProduct, qty);
   
       setShowCart(true);
+    }
+    const handleAdd = () => {
+      const sentProduct = {...product}
+      sentProduct.name = `${sentProduct.name} ${sentProduct.sizes && sentProduct.sizes[sizeIndex]?.size && `- ${sentProduct.sizes[sizeIndex].size}`}`
+      sentProduct.price = sentProduct.price + (sentProduct.sizes && sentProduct.sizes[sizeIndex]?.addedprice || 0)
+
+      onAdd(sentProduct, qty);
+  
     }
 
   return (
@@ -52,10 +60,10 @@ const ProductInfo = ({product}) => {
         </div>
 
         <div className="product-detail-desc">
-          <h1>{name} - {sizes[sizeIndex].size}</h1>
+          <h1>{name} {sizes && sizes[sizeIndex]?.size && `- ${sizes[sizeIndex].size}`}</h1>
           <h4>Details: </h4>
           <p>{details}</p>
-          <p className="price">${price + sizes[sizeIndex].addedprice}</p>
+          <p className="price">${price + (sizes && sizes[sizeIndex]?.addedprice || 0)}</p>
           {/* <div className="quantity">
             <h3>Quantity:</h3>
             <p className="quantity-desc">
@@ -74,7 +82,7 @@ const ProductInfo = ({product}) => {
           }
           </div>
           <div className="buttons">
-          <button type="button" className="add-to-cart" onClick={() => onAdd(product, qty)}>Add to Cart</button>
+          <button type="button" className="add-to-cart" onClick={() => handleAdd(product)}>Add to Cart</button>
             <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button>
           </div>
         </div>

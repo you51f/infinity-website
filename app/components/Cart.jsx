@@ -69,8 +69,8 @@ const Cart = () => {
               <img src={urlForImage(item?.image[0])} className="cart-product-image" />
               <div className="item-desc">
                 <div className="flex top">
-                  <h5>{item.name}</h5>
-                  <h4>${item.price}</h4>
+                  <h5>{item?.name}</h5>
+                  <h4>${item?.price}</h4>
                 </div>
                 <div className="flex bottom">
                   <div>
@@ -78,7 +78,7 @@ const Cart = () => {
                     <span className="minus" onClick={() => toggleCartItemQuanitity(item._id, item.name, 'dec') }>
                     <AiOutlineMinus />
                     </span>
-                    <span className="num" onClick="">{item.quantity}</span>
+                    <span className="num" onClick="">{item?.quantity}</span>
                     <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, item.name, 'inc') }><AiOutlinePlus /></span>
                   </p>
                   </div>
