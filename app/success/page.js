@@ -7,20 +7,22 @@ import { useStateContext } from '../context/StateContext';
 import { sendContactForm } from '../api/send';
  
 export default async function Success() {
-  const { setCartItems, setTotalPrice, setTotalQuantities, formValues } = useStateContext();
+  const { setCartItems, setTotalPrice, setTotalQuantities, formValues, restForm } = useStateContext();
   // const { formValues, updateFormValue, handleSubmit } = useStateContext();
 
  
   async function sendForm() {
     await sendContactForm(formValues)
     // Send the form data to the server
+    restForm()
     }
 
 
-    resetForm();
+    
   
   useEffect(() => {
     sendForm()
+
     localStorage.clear();
     setCartItems([]);
     setTotalPrice(0);
