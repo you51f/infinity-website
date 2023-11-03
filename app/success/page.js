@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { BsBagCheckFill } from 'react-icons/bs';
 
 import { useStateContext } from '../context/StateContext';
+import { sendContactForm } from '../api/send';
  
 export default async function Success() {
   const { setCartItems, setTotalPrice, setTotalQuantities, formValues } = useStateContext();
