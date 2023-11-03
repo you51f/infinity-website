@@ -1,6 +1,8 @@
 "use client"
 import React, { createContext, useContext, useState } from 'react';
+import { sendContactForm } from '../api/send';
 // import { toast } from 'react-hot-toast';
+import getStripe from '../lib/getStripe';
 
 const Context = createContext();
 
@@ -13,6 +15,22 @@ export const StateContext = ({ children }) => {
 
     let foundProduct;
   let index; 
+
+  const [formValues, setFormValues] = useState({
+    recipientName: '',
+    idNumber: '',
+    specificAddress: '',
+    countryRegion: '(US) United States',
+    provinceState: '',
+    city: '',
+    postalCode: '',
+    recipientMobile: '',
+    recipientMailbox: '',
+    subject: "New Order Details",
+    email: '',
+    privacyPolicyChecked: false,
+    returnPolicyChecked: false,
+  });
 
   // const onAdd = (product, quantity) => {
   //   const checkProductInCart = cartItems.find((item) => (item._id === product._id && item.name === product.name));
@@ -135,6 +153,58 @@ export const StateContext = ({ children }) => {
     });
   }
 
+  const updateFormValue = (fieldName, value) => {
+    setFormValues((prevValues) => ({
+      ...prevValues,
+      [fieldName]: value,
+    }));
+  };
+
+  const resetForm = () => {
+    setFormValues({
+      recipientName: '',
+      idNumber: '',
+      specificAddress: '',
+      countryRegion: '',
+      provinceState: '',
+      city: '',
+      postalCode: '',
+      recipientMobile: '',
+      recipientMailbox: '',
+      subject: "New Order Details",
+      email: '',
+      privacyPolicyChecked: false,
+      returnPolicyChecked: false,
+    });
+  };
+  const handleCheckout = async () => {
+    const stripe = await getStripe();
+
+    const response = await fetch('/api/stripe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(cartItems),
+    });
+
+    if(response.statusCode === 500) return;
+    
+    const data = await response.json();
+
+    // toast.loading('Redirecting...');
+
+    stripe.redirectToCheckout({ sessionId: data.id });
+  }
+
+  const handleSubmit = () => {
+    // Perform form submission or further processing here using formValues
+    // console.log('Form submitted:', formValues);
+    handleCheckout()
+    // await sendContactForm(data)
+    // resetForm();
+  };
+
   return (
     <Context.Provider
       value={{
@@ -151,7 +221,11 @@ export const StateContext = ({ children }) => {
         onRemove,
         setCartItems,
         setTotalPrice,
-        setTotalQuantities 
+        setTotalQuantities,
+        formValues,
+        updateFormValue, 
+        handleSubmit,
+        resetForm 
       }}
     >
       {children}

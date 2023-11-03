@@ -51,7 +51,7 @@ const Cart = () => {
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
             <h3>Your shopping bag is empty</h3>
-            <Link href="/">
+            <Link href="/store">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
@@ -101,9 +101,14 @@ const Cart = () => {
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
-              <button type="button" className="btn" onClick={() => handleCheckout()}>
+              <Link href="/client-details">
+              <button type="button" className="btn" >
                 Pay with Stripe
               </button>
+              </Link>
+              {/* <button type="button" className="btn" onClick={() => handleCheckout()}>
+                Pay with Stripe
+              </button> */}
             </div>
           </div>
         )}

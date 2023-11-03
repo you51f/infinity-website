@@ -6,7 +6,7 @@ import { StateContext } from './context/StateContext'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Infinity Flight Horizons',
+  title: 'INFINITY Flight Horizons',
   description: 'Take you to sky',
   // icons: {
   //   icon: '/public/favicon.ico',

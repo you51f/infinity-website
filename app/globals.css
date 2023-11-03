@@ -93,6 +93,55 @@
               }
             }
 
+            .privacy {
+              display: flex;
+              flex-direction: column;
+              padding: 3vw;
+            }
+            .privacy-title {
+              color: var(--infinity-dark-color);
+              margin-bottom: 3vw;
+            }
+            .privacy-text {
+              color: var(--text-color);
+              margin-bottom: 2vw;
+            }
+            .privacy-text2 {
+              color: var(--heading-color);
+              margin-bottom: 2vw;
+            }
+
+            .policy-link {
+              color: var(--infinity-dark-color);
+              font-weight: bold;
+            }
+
+            .checkout {
+              background: #bedbe2;
+              width: 100%;
+              padding: 30px 0;
+              padding-top: 3vw;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .checkout-form {
+              background: var(--white-color);
+              width: 60%;
+              justify-content: center;
+              align-items: center;
+              padding: 50px 20px;
+              border-radius: 10px;
+            }
+            .checkout-for-details {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+            }
+
             .size-container {
               display: grid;
               grid-template-columns: auto auto auto auto auto auto;
@@ -611,6 +660,19 @@
               display: flex;
               align-items: center;
             }
+            .header-image {
+              background-image: url(/images/INFINITY-Flight-Horizons.webp);
+              width: 100%;
+              height: 45px;
+              background-size: contain;
+              background-position: center;
+              background-repeat: no-repeat;
+            }
+
+            /* .header-stick {
+              position: sticky;
+              top: 0;
+            } */
             
             .header-text {
               color: var(--text-color);
@@ -765,7 +827,7 @@
               /* position: relative; */
               width: 400px;
               height: 400px;
-              background-image: url(/images/work-sec-image.webp);
+              background-image: url(/images/Infinity-aviation-new.webp);
               background-size: contain;
               background-repeat: no-repeat;
               background-position: center;
@@ -1022,7 +1084,7 @@
               display: flex;
               align-items: center;
               justify-content: center;
-              font-size: calc((2.2 - 1) * 0.5vw + 0.4rem);
+              font-size: calc((2.2 - 1) * 0.7vw + 0.4rem);
             
             
             }
@@ -1677,6 +1739,28 @@
               font-size: 30px;
             }
             
+            .input-checkbox {
+              margin: 10px 0;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+            }
+            .fill-form-text {
+              /* color: var(--text-color); */
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+            .input-checkbox-text {
+              margin-left: 7px
+            }
+            .checkout-btn {
+              margin: 10px 0;
+            }
             .input {
               width: 100%;
               padding: 1rem;
@@ -1725,7 +1809,13 @@
             .select:focus {
               outline: 1px solid var(--light-color);
             }
-            
+            .checkout-btn {
+              margin-top: 10px;
+            }
+            .checkout-btn2 {
+              margin-top: 10px;
+              margin-bottom: 10px;
+            }
             .button {
               padding: 0.8rem;
               font-size: 1rem;
@@ -1906,6 +1996,22 @@
 
             
             @media (max-width: 800px) {
+              .header-image {
+                background-image: url(/images/INFINITY-Flight-Horizons.webp);
+                width: 100%;
+                height: 20px;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+              }
+              .checkout-form {
+                background: var(--white-color);
+                width: 90%;
+                justify-content: center;
+                align-items: center;
+                padding: 50px 20px;
+                border-radius: 10px;
+              }
               .cart-container{
                 width: 415px;
               padding: 4px;
@@ -2142,7 +2248,7 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: 1vw 3vw;
-                height: 70px;
+                height: 50px;
                 /* background-color: aqua; */
                 border-bottom: 1px solid var(--border-color);
               }

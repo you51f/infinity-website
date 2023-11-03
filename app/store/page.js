@@ -27,7 +27,7 @@ export default async function Store () {
 
         {/* heading & category */}
         <div className="heading Aircraft-models">
-          <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>Aircraft models</h3></div>
+          <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Aircraft models</h3></div>
           <Link href="/store/aircraft-models"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
         </div>
 
@@ -47,7 +47,7 @@ export default async function Store () {
 
         {/* heading & category */}
           <div className="heading pilot">
-          <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>Pilot</h3></div>
+          <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Pilot</h3></div>
           <Link href="/store/pilot"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
         </div>
 
@@ -65,7 +65,7 @@ export default async function Store () {
 
       {/* heading & category */}
       <div className="heading Cabin-Crew">
-          <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>Cabin Crew</h3></div>
+          <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Cabin Crew</h3></div>
           <Link href="/store/cabin-crew"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
         </div>
         
@@ -83,7 +83,7 @@ export default async function Store () {
 
        {/* heading & category */}
        <div className="heading Decorations">
-          <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>Decorations</h3></div>
+          <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Decorations</h3></div>
           <Link href="/store/decorations"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
         </div>
         
@@ -101,7 +101,7 @@ export default async function Store () {
 
       {/* heading & category */}
       <div className="heading others">
-          <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>Extra</h3></div>
+          <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Extra</h3></div>
           <Link href="/store/extra"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
         </div>
         

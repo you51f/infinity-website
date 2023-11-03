@@ -4,7 +4,7 @@ import { BiPhoneCall } from 'react-icons/bi';
 import { HiOutlineMail } from 'react-icons/hi';
 import { AiOutlineInstagram } from 'react-icons/ai';
 import { AiFillFacebook } from 'react-icons/ai';
-import { AiOutlineTwitter } from 'react-icons/ai';
+import { FaXTwitter } from 'react-icons/fa6';
 import { BiLogoTiktok } from 'react-icons/bi';
 import Link from 'next/link';
 
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="footer-follow-icons">
             <Link href="https://www.instagram.com/infinity_stooore?r=nametag" target="_blank"><AiOutlineInstagram  className='icon-space-footer'/></Link>
             <Link href="https://www.facebook.com/Infinitysudan?mibextid=ZbWKwL" target="_blank"><AiFillFacebook className='icon-space-footer'/></Link>
-            <Link href="https://twitter.com/INFINITYSORE?t=mSTX61TI1W6KXHZsgJXh8w&s=09" target="_blank"><AiOutlineTwitter  className='icon-space-footer'/></Link>
+            <Link href="https://twitter.com/INFINITYSORE?t=mSTX61TI1W6KXHZsgJXh8w&s=09" target="_blank"><FaXTwitter  className='icon-space-footer'/></Link>
             <Link href="https://www.tiktok.com/@infinitystore24?_t=8edEW5J5BUk&_r=1" target="_blank"><BiLogoTiktok  className='icon-space-footer'/></Link>
             </div>
         </div>  
@@ -39,20 +39,20 @@ const Footer = () => {
           <div className="footer-lined-title">Pages & Services</div>
           <ul className="footer-list">
             <li className='doted-text'><Link href={'/'}>Home</Link></li>
-            <li className='doted-text'><Link href={'/aviation'}>Infinity Aviation</Link></li>
-            {/* <li className='doted-text'>Infinity Store</li> */}
+            <li className='doted-text'><Link href={'/aviation'}>Aviation</Link></li>
+            <li className='doted-text'><Link href={'/store'}>Store</Link></li>
             <li className='doted-text'><Link href={'/contact'}>Contact</Link></li>
             <li className='doted-text'><Link href={'/about'}>About Us</Link></li>
           </ul>
         </div>
-        {/* <div className="footer-section3">
-          <div className="footer-lined-title">Customer Services</div>
+        <div className="footer-section3">
+          <div className="footer-lined-title">Our Policies</div>
           <ul className="footer-list">
-            <li className='doted-text'>About Us</li>
-            <li className='doted-text'>Terms & Consitions</li>
-            <li className='doted-text'>Cancellation policy</li>
+            {/* <li className='doted-text'>About Us</li> */}
+            <li className='doted-text'><Link href={"/privacy-policy"}>Privacy policy</Link></li>
+            <li className='doted-text'><Link href={"/return-policy"}>Return policy</Link></li>
           </ul>
-        </div> */}
+        </div>
         </div>
         </div>
         <div className="evo-side">
