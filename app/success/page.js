@@ -11,12 +11,16 @@ export default async function Success() {
   // const { formValues, updateFormValue, handleSubmit } = useStateContext();
 
  
+  async function sendForm() {
+    await sendContactForm(formValues)
+    // Send the form data to the server
+    }
 
 
     resetForm();
   
   useEffect(() => {
-    await sendContactForm(formValues)
+    sendForm()
     localStorage.clear();
     setCartItems([]);
     setTotalPrice(0);
