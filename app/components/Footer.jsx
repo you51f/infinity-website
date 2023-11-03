@@ -40,7 +40,7 @@ const Footer = () => {
           <ul className="footer-list">
             <li className='doted-text'><Link href={'/'}>Home</Link></li>
             <li className='doted-text'><Link href={'/aviation'}>Aviation</Link></li>
-            <li className='doted-text'><Link href={'/store'}>Store</Link></li>
+            <li className='doted-text'><Link href={'/store'}>Store</Link></li> 
             <li className='doted-text'><Link href={'/contact'}>Contact</Link></li>
             <li className='doted-text'><Link href={'/about'}>About Us</Link></li>
           </ul>

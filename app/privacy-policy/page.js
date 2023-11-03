@@ -17,7 +17,7 @@ We collect this data for shipping purposes and solely use it to create the shipp
         <h4 className='privacy-text2'>3. Data Security Measures:</h4>
         <h4 className='privacy-text'>
 We prioritize the security of your data and have implemented appropriate physical, electronic, and managerial procedures to safeguard and secure the information we collect online. While we cannot guarantee the absolute security of the data, we strive to use commercially acceptable means to protect your personal information.</h4>
-        <h4 className='privacy-text2'>4. Sharing Information:</h4>
+        <h4 className='privacy-text2'>4. Sharing Information:</h4> 
         <h4 className='privacy-text'>
 We share the collected data with the shipping company to facilitate the delivery of our products to customers.</h4>
         <h4 className='privacy-text2'>5. User Rights:</h4>

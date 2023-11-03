@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { BsBagCheckFill } from 'react-icons/bs';
 
 import { useStateContext } from '../context/StateContext';
-
-const Success = () => {
+ 
+export default async function Success() {
   const { setCartItems, setTotalPrice, setTotalQuantities, formValues } = useStateContext();
   // const { formValues, updateFormValue, handleSubmit } = useStateContext();
 
+ 
   await sendContactForm(formValues)
 
     resetForm();
@@ -45,4 +46,3 @@ const Success = () => {
   )
 }
 
-export default Success

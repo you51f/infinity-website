@@ -13,7 +13,7 @@ const ReturnPolicy = () => {
         <h4 className='privacy-text'>If you have any concerns or inquiries regarding returns or refunds, please feel free to reach out to our sales department at sales@infinitycoltd.com. We are dedicated to providing a seamless shopping experience for all our customers.</h4>
         </div>
         <Footer/>
-    </div>
+    </div> 
   )
 }
 

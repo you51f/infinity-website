@@ -9,7 +9,7 @@ import { client } from '@/sanity/lib/client';
 import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import { productsQuery } from '@/sanity/lib/queries';
 import Link from 'next/link';
-
+ 
 export default async function Store () {
   const products = await sanityFetch(productsQuery); 
   var pilot = 0

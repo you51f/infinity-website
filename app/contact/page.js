@@ -24,7 +24,7 @@ const Contact = () => {
   const [btnValue, setBtnValue] = useState('send');
 
   const onNewSubmit = async(e) => {
-    setBtnValue('NOTsend');
+    setBtnValue('NOTsend'); 
     e.preventDefault();
     const data = {
       email: email,

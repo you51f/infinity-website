@@ -8,7 +8,7 @@ import { TiDeleteOutline } from 'react-icons/ti';
 import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
 import getStripe from '../lib/getStripe';
-// import { urlFor } from '../lib/client';
+// import { urlFor } from '../lib/client'; 
 // import getStripe from '../lib/getStripe';
 
 const Cart = () => {

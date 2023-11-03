@@ -181,7 +181,7 @@ export const StateContext = ({ children }) => {
     const stripe = await getStripe();
 
     const response = await fetch('/api/stripe', {
-      method: 'POST',
+      method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
       },
