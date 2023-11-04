@@ -28,10 +28,10 @@ const Footer = () => {
           <div className="footer-contact-sub sub-pad">MY: +60 117 007 1557</div>
           <div className="footer-contact">Follow us on:</div>
           <div className="footer-follow-icons">
-            <Link href="https://www.instagram.com/infinity_stooore?r=nametag" target="_blank"><AiOutlineInstagram  className='icon-space-footer'/></Link>
-            <Link href="https://www.facebook.com/Infinitysudan?mibextid=ZbWKwL" target="_blank"><AiFillFacebook className='icon-space-footer'/></Link>
-            <Link href="https://twitter.com/INFINITYSORE?t=mSTX61TI1W6KXHZsgJXh8w&s=09" target="_blank"><FaXTwitter  className='icon-space-footer'/></Link>
-            <Link href="https://www.tiktok.com/@infinitystore24?_t=8edEW5J5BUk&_r=1" target="_blank"><BiLogoTiktok  className='icon-space-footer'/></Link>
+            <Link href="https://instagram.com/infinity_flight_horizons?igshid=OGQ5ZDc2ODk2ZA==" target="_blank"><AiOutlineInstagram  className='icon-space-footer'/></Link>
+            <Link href="https://www.facebook.com/INFINITYFlightHorizons?mibextid=ZbWKwL" target="_blank"><AiFillFacebook className='icon-space-footer'/></Link>
+            <Link href="https://x.com/infinity_fh?t=IL-mdl1_P9obCM_kNFBDyQ&s=09" target="_blank"><FaXTwitter  className='icon-space-footer'/></Link>
+            <Link href="https://www.tiktok.com/@infinity_fh?_t=8h4RnS3zFY6&_r=1" target="_blank"><BiLogoTiktok  className='icon-space-footer'/></Link>
             </div>
         </div>  
         <div className="footer-section2">

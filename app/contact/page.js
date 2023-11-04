@@ -23,7 +23,7 @@ const Contact = () => {
   const [comment, setComment] = useState('');
   const [btnValue, setBtnValue] = useState('send');
 
-  const onNewSubmit = async(e) => {
+  const onNewSubmit = async(e) => { 
     setBtnValue('NOTsend'); 
     e.preventDefault();
     const data = {

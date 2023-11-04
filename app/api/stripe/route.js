@@ -41,6 +41,8 @@ export async function POST(request) {
             
             success_url: 'https://www.infinitycoltd.com/success',
             cancel_url: 'https://www.infinitycoltd.com/store',
+            // success_url: 'http://localhost:3000/success',
+            // cancel_url: 'http://localhost:3000/store',
           } 
     
           // Create Checkout Sessions from body params.

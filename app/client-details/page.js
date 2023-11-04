@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link';
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useStateContext } from '../context/StateContext';
 import getStripe from '../lib/getStripe';
 
@@ -18,12 +18,18 @@ const ClientDetails = () => {
   const [email, setEmail] = useState('');
   const [privacyPolicyChecked, setPrivacyPolicyChecked] = useState(false);
   const [returnPolicyChecked, setReturnPolicyChecked] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(false);
 
 
-  const { formValues, updateFormValue, handleSubmit, cartItems } = useStateContext();
+  const { formData, updateFormValue, handleSubmit, cartItems, setShowCart } = useStateContext();
+
+  useEffect(() => {
+   setShowCart(false);
+  }, []);
 
   const handleCheckout = async (e) => {
     e.preventDefault();
+    setButtonDisabled(true);
     const stripe = await getStripe();
 
     const response = await fetch('/api/stripe', {
@@ -46,23 +52,23 @@ const ClientDetails = () => {
     <div className='checkout'>
         <div className='checkout-form'>
         
-        <div className='fill-form-text'><p className='left-logo'></p><h3>Fill this form for Delivery Details</h3></div>
+        <div className='fill-form-text'><p className='left-logo'></p><h3>Delivery Details</h3></div>
         <form className="checkout-for-details" onSubmit={handleCheckout}>
         
       
         <input
         type="text"
         placeholder="Recipient's name"
-        value={formValues.recipientName}
+        value={formData.recipientName}
         onChange={(e) => updateFormValue('recipientName', e.target.value)}
         required
         className="input"
       />
 
       <input
-        type="number"
+        type="text"
         placeholder="ID Number"
-        value={formValues.idNumber}
+        value={formData.idNumber}
         onChange={(e) => updateFormValue('idNumber', e.target.value)}
         required
         className="input"
@@ -71,7 +77,7 @@ const ClientDetails = () => {
       <input
         type="text"
         placeholder="Specific address"
-        value={formValues.specificAddress}
+        value={formData.specificAddress}
         onChange={(e) => updateFormValue('specificAddress', e.target.value)}
         required
         className="input"
@@ -80,7 +86,7 @@ const ClientDetails = () => {
       <input
         type="text"
         placeholder="Country/Region"
-        value={formValues.countryRegion}
+        value={formData.countryRegion}
         onChange={(e) => updateFormValue('countryRegion', e.target.value)}
         required
         disabled
@@ -90,7 +96,7 @@ const ClientDetails = () => {
       <input
         type="text"
         placeholder="Province/state"
-        value={formValues.provinceState}
+        value={formData.provinceState}
         onChange={(e) => updateFormValue('provinceState', e.target.value)}
         required
         className="input"
@@ -99,7 +105,7 @@ const ClientDetails = () => {
       <input
         type="text"
         placeholder="City"
-        value={formValues.city}
+        value={formData.city}
         onChange={(e) => updateFormValue('city', e.target.value)}
         required
         className="input"
@@ -108,16 +114,16 @@ const ClientDetails = () => {
       <input
         type="text"
         placeholder="Postal Code or Zip code"
-        value={formValues.postalCode}
+        value={formData.postalCode}
         onChange={(e) => updateFormValue('postalCode', e.target.value)}
         required
         className="input"
       />
 
       <input
-        type="text"
+        type="number"
         placeholder="Recipient's mobile"
-        value={formValues.recipientMobile}
+        value={formData.recipientMobile}
         onChange={(e) => updateFormValue('recipientMobile', e.target.value)}
         required
         className="input"
@@ -126,7 +132,7 @@ const ClientDetails = () => {
       <input
         type="text"
         placeholder="Recipient's Mailbox"
-        value={formValues.recipientMailbox}
+        value={formData.recipientMailbox}
         onChange={(e) => updateFormValue('recipientMailbox', e.target.value)}
         required
         className="input"
@@ -135,7 +141,7 @@ const ClientDetails = () => {
       <input
         type="email"
         placeholder="Email"
-        value={formValues.email}
+        value={formData.email}
         onChange={(e) => updateFormValue('email', e.target.value)}
         required
         className="input"
@@ -144,7 +150,7 @@ const ClientDetails = () => {
       <label className='input-checkbox'>
         <input
           type="checkbox"
-          checked={formValues.privacyPolicyChecked}
+          checked={formData.privacyPolicyChecked}
           onChange={(e) => updateFormValue('privacyPolicyChecked', e.target.value)}
           required
         />
@@ -157,7 +163,7 @@ const ClientDetails = () => {
       <label className='input-checkbox'>
         <input
           type="checkbox"
-          checked={formValues.returnPolicyChecked}
+          checked={formData.returnPolicyChecked}
           onChange={(e) => updateFormValue('returnPolicyChecked', e.target.value)}
           required
         />
@@ -172,8 +178,8 @@ const ClientDetails = () => {
       </div>
       
     
-      <button type="submit" className="button checkout-btn">Continue To Stripe</button>
-      {/* <p className='sentM'>Your message was sent successfully!</p> */}
+      <button type="submit" className="button checkout-btn" style={{ backgroundColor: buttonDisabled ? 'lightgrey' : '' }} disabled={buttonDisabled}>Continue To Stripe</button>
+      {buttonDisabled && <p className='sentM'>Preparing the Stripe checkout page</p>}
       
     </form>
         </div>

@@ -1,5 +1,5 @@
 "use client"
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import { sendContactForm } from '../api/send';
 // import { toast } from 'react-hot-toast';
 import getStripe from '../lib/getStripe';
@@ -15,6 +15,31 @@ export const StateContext = ({ children }) => {
 
     let foundProduct;
   let index; 
+
+  const [formData, setFormData] = useState(() => {
+    const storedData = typeof window !== 'undefined' ? localStorage.getItem('formData') : null;
+    return storedData ? JSON.parse(storedData) : {
+      recipientName: '',
+    idNumber: '',
+    specificAddress: '',
+    countryRegion: '(US) United States',
+    provinceState: '',
+    city: '',
+    postalCode: '',
+    recipientMobile: '',
+    recipientMailbox: '',
+    subject: "New Order Details",
+    email: '',
+    privacyPolicyChecked: false,
+    returnPolicyChecked: false,
+    };
+  });
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('formData', JSON.stringify(formData));
+    }
+  }, [formData]);
 
   const [formValues, setFormValues] = useState({
     recipientName: '',
@@ -154,14 +179,14 @@ export const StateContext = ({ children }) => {
   }
 
   const updateFormValue = (fieldName, value) => {
-    setFormValues((prevValues) => ({
+    setFormData((prevValues) => ({
       ...prevValues,
       [fieldName]: value,
     }));
   };
 
   const resetForm = () => {
-    setFormValues({
+    setFormData({
       recipientName: '',
       idNumber: '',
       specificAddress: '',
@@ -225,7 +250,8 @@ export const StateContext = ({ children }) => {
         formValues,
         updateFormValue, 
         handleSubmit,
-        resetForm 
+        resetForm,
+        formData 
       }}
     >
       {children}

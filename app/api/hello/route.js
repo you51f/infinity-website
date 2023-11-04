@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 
 
-// const password = "imcqouyaykhjtttc";
+const password = "imcqouyaykhjtttc";
 
 
 export async function POST(request) {
@@ -55,7 +55,7 @@ export async function POST(request) {
       secure: false,
         auth: {
             user: "Sales.infinityaviation@gmail.com",
-            pass: process.env.NODE_MAILER_PASS_CONSULTING
+            pass: process.env.NODE_MAILER_PASS_SALES
             // user: email,
             // pass: password
         },
