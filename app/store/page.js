@@ -1,6 +1,6 @@
 
 import React  from 'react'
-import { Advertising, Product } from '../components'
+import { Advertising, MoreProduct, Product } from '../components'
 import { BiFilter } from 'react-icons/bi';
 import { BiSolidDownArrow } from 'react-icons/bi';
 import { Footer, Header, WhatsAppButton } from '../components';
@@ -28,15 +28,18 @@ export default async function Store () {
         {/* heading & category */}
         <div className="heading Aircraft-models">
           <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Aircraft models</h3></div>
-          <Link href="/store/aircraft-models"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
+          {/* <Link href="/store/aircraft-models"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
         </div>
 
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "aircraft-models") {
-            if (AircraftModels < 4) {
+            if (AircraftModels < 7) {
               AircraftModels++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
+            }else if (AircraftModels === 7) {
+              AircraftModels++
+              return <Link className='product-position' href="/store/aircraft-models"><MoreProduct/></Link>
             }
             
           }
@@ -48,16 +51,19 @@ export default async function Store () {
         {/* heading & category */}
           <div className="heading pilot">
           <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Pilot</h3></div>
-          <Link href="/store/pilot"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
+          {/* <Link href="/store/pilot"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
         </div>
 
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "pilot") {
-            if (pilot < 4) {
+            if (pilot < 7) {
               pilot++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } 
+            } else if (pilot === 7) {
+              pilot++
+              return <Link className='product-position' href="/store/pilot"><MoreProduct/></Link>
+            }
           }
         })}
       </div>
@@ -66,16 +72,19 @@ export default async function Store () {
       {/* heading & category */}
       <div className="heading Cabin-Crew">
           <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Cabin Crew</h3></div>
-          <Link href="/store/cabin-crew"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
+          {/* <Link href="/store/cabin-crew"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
         </div>
         
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "cabin-crew") {
-            if (CabinCrew < 4) {
+            if (CabinCrew < 7) {
               CabinCrew++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } 
+            } else if (CabinCrew === 7) {
+              CabinCrew++
+              return <Link className='product-position' href="/store/cabin-crew"><MoreProduct/></Link>
+            }
           }
         })}
       </div>
@@ -84,16 +93,19 @@ export default async function Store () {
        {/* heading & category */}
        <div className="heading Decorations">
           <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Decorations</h3></div>
-          <Link href="/store/decorations"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
+          {/* <Link href="/store/decorations"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
         </div>
         
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "decorations") {
-            if (Decorations < 4) {
+            if (Decorations < 7) {
               Decorations++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } 
+            } else if (Decorations === 7) {
+              Decorations++
+              return <Link className='product-position' href="/store/decorations"><MoreProduct/></Link>
+            }
           }
         })}
       </div>
@@ -102,16 +114,19 @@ export default async function Store () {
       {/* heading & category */}
       <div className="heading others">
           <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Extra</h3></div>
-          <Link href="/store/extra"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link>
+          {/* <Link href="/store/extra"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
         </div>
         
       <div className="product-container">
         {products.map((product) => {
           if(product.category != "decorations" && product.category != "cabin-crew" && product.category != "pilot" && product.category != "aircraft-models" ) {
-            if (others < 4) {
+            if (others < 7) {
               others++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } 
+            } else if (others === 7) {
+              others++
+              return <Link className='product-position' href="/store/extra"><MoreProduct/></Link>
+            }
           }
         })}
       </div>

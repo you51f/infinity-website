@@ -126,7 +126,7 @@ const Aviation = () => {
         <div className='left-text'>
           <p className='left-text-text'>Infinity Consulting Team is a highly reliable and committed group that strives to discover optimal and effective solutions tailored to your specific needs, ensuring utmost satisfaction.</p>
           <p className='left-text-text2'>Consultation for the following </p>
-<p className='left-text-text2'>- Buying, saling aircrafts</p>
+<p className='left-text-text2'>- Buying, selling aircrafts</p>
 <p className='left-text-text2'>- Inspection before buying aircrafts, physical and documentation inspection. </p>
 <p className='left-text-text3'>- Set-up of maintenance organization.</p>
           <p className='left-text-text'>Our team operates under the exceptional leadership of Chief Engineer Mohamed Hassanein, who boasts an impressive 30 years of experience in the aviation industry.</p>

@@ -768,17 +768,20 @@
             .work-sec {
               padding: 3vw 3vw;
               width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
               /* justify-content: center; */
-              overflow: hidden;
-              overflow-x: scroll;
+              /* overflow: hidden;
+              overflow-x: scroll; */
               
             }
-            .work-sec::-webkit-scrollbar {
+            .work-se::-webkit-scrollbar {
               width: 0px; /* Width of the scrollbar */
             }
             
             /* Handle */
-            .work-sec::-webkit-scrollbar-thumb {
+            .work-se::-webkit-scrollbar-thumb {
               /* background-color: #888; Color of the scrollbar handle */
               border-radius: 0px; /* Rounded corners of the scrollbar handle */
             }
@@ -788,14 +791,15 @@
               /* justify-content: center; */
               display: flex;
               flex-direction: row;
-              /* justify-content: space-between; */
+              justify-content: center;
+              align-items: center;
               
             }
             
             .work-sec-container {
-              margin-right: 3vw;
+              
               padding: 0vw 6vw;
-              width: 800px;
+              width: 650px;
               background-color: var(--dark-banner-color);
               border-radius: 16px;
               display: flex;
@@ -806,7 +810,7 @@
             .work-sec-container2 {
               margin-right: 3vw;
               padding: 0vw 6vw;
-              width: 800px;
+              width: 650px;
               background-color: var(--infinity-light-color);
               border-radius: 16px;
               display: flex;
@@ -1120,6 +1124,44 @@
               flex-direction: column;
               background-color: var(--white-color);
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              transition: transform 0.3s;
+            }
+            .more-box {
+              width: 180px;
+              height: 250px; 
+              margin-right: 10px;
+              border-radius: 16px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              background-color: #cccccc;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+              cursor: pointer;
+              transition: transform 0.3s;
+            }
+            .more-box:hover {
+              transform: scale(1.05);
+            }
+            .product-box:hover {
+              transform: scale(1.05);
+             
+            }
+
+            .more-circle {
+              width: 120px;
+              height: 120px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 70px;
+              background-color: #8f8f8f;
+              font-weight: bold;
+              flex-direction: column;
+              color: white;
+            }
+            .more-arrow {
+              font-size: 28px;
             }
             
             
@@ -1999,7 +2041,7 @@
               .header-image {
                 background-image: url(/images/INFINITY-Flight-Horizons.webp);
                 width: 100%;
-                height: 40px;
+                height: 26px;
                 background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -2345,10 +2387,20 @@
                 background-repeat: no-repeat;
                 background-position: center;
               }
+              .work-sec2 {
+                /* padding: 3vw 10vw; */
+                width: 100%;
+                /* justify-content: center; */
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+              }
               .work-sec-container {
-                margin-right: 3vw;
+                margin-right: 0vw;
                 padding: 0vw 6vw;
-                width: 300px;
+                width: 350px;
                 background-color: var(--dark-banner-color);
                 border-radius: 16px;
                 display: flex;
@@ -2357,9 +2409,10 @@
                 flex-direction: row;
               }
               .work-sec-container2 {
-                margin-right: 3vw;
+                margin-right: 0vw;
+                margin-bottom: 3vw;
                 padding: 0vw 6vw;
-                width: 300px;
+                width: 350px;
                 background-color: var(--infinity-light-color);
                 border-radius: 16px;
                 display: flex;

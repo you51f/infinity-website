@@ -14,3 +14,4 @@ export { default as WhatsAppButton } from "./WhatsAppButton";
 export { default as ProductInfo } from "./ProductInfo";
 export { default as Cart } from "./Cart";
 export { default as SuccessInfo } from "./SuccessInfo";
+export { default as MoreProduct } from "./MoreProduct";
