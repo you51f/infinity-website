@@ -34,10 +34,10 @@ export default async function Store () {
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "aircraft-models") {
-            if (AircraftModels < 7) {
+            if (AircraftModels < 3) {
               AircraftModels++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            }else if (AircraftModels === 7) {
+            }else if (AircraftModels === 3) {
               AircraftModels++
               return <Link className='product-position' href="/store/aircraft-models"><MoreProduct/></Link>
             }
@@ -57,10 +57,10 @@ export default async function Store () {
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "pilot") {
-            if (pilot < 7) {
+            if (pilot < 3) {
               pilot++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } else if (pilot === 7) {
+            } else if (pilot === 3) {
               pilot++
               return <Link className='product-position' href="/store/pilot"><MoreProduct/></Link>
             }
@@ -78,10 +78,10 @@ export default async function Store () {
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "cabin-crew") {
-            if (CabinCrew < 7) {
+            if (CabinCrew < 3) {
               CabinCrew++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } else if (CabinCrew === 7) {
+            } else if (CabinCrew === 3) {
               CabinCrew++
               return <Link className='product-position' href="/store/cabin-crew"><MoreProduct/></Link>
             }
@@ -99,10 +99,10 @@ export default async function Store () {
       <div className="product-container">
         {products.map((product) => {
           if(product.category == "decorations") {
-            if (Decorations < 7) {
+            if (Decorations < 3) {
               Decorations++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } else if (Decorations === 7) {
+            } else if (Decorations === 3) {
               Decorations++
               return <Link className='product-position' href="/store/decorations"><MoreProduct/></Link>
             }
@@ -120,10 +120,10 @@ export default async function Store () {
       <div className="product-container">
         {products.map((product) => {
           if(product.category != "decorations" && product.category != "cabin-crew" && product.category != "pilot" && product.category != "aircraft-models" ) {
-            if (others < 7) {
+            if (others < 3) {
               others++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
-            } else if (others === 7) {
+            } else if (others === 3) {
               others++
               return <Link className='product-position' href="/store/extra"><MoreProduct/></Link>
             }
