@@ -885,11 +885,11 @@
             }
             
             .work-sec {
-              padding: 3vw 3vw;
+              padding: 3vw 6vw;
               width: 100%;
               display: flex;
-              justify-content: center;
-              align-items: center;
+              justify-content: flex-end;
+              /* align-items: center; */
               /* justify-content: center; */
               /* overflow: hidden;
               overflow-x: scroll; */
@@ -1233,7 +1233,7 @@
               border-radius: 0px;
             } */ 
             .product-box {
-              width: 180px;
+              width: 170px;
               height: 250px; 
               margin-right: 10px;
               border-radius: 16px;
@@ -1246,7 +1246,7 @@
               transition: transform 0.3s;
             }
             .more-box {
-              width: 180px;
+              width: 170px;
               height: 250px; 
               margin-right: 10px;
               border-radius: 16px;
@@ -1285,7 +1285,7 @@
             
             
             .productImage {
-              width: 180px;
+              width: 170px;
               height: 140px;
               border-top-right-radius: 16px;
               border-top-left-radius: 16px;
@@ -1301,7 +1301,7 @@
             }
             
             .product-btn {
-              width: 180px;
+              width: 170px;
               height: 40px;
               color: var(--white-color);
               display: flex;
@@ -2254,9 +2254,9 @@
               .product-container {
                 width: 100%;
                 margin-bottom: 3vw;
-                padding: 0 3vw;
-                display: grid;
-                grid-template-columns: auto;
+                padding: 0 1.5vw;
+                display: grid; 
+                grid-template-columns: auto auto;
                 /* flex-direction: row;
                 overflow: hidden;
                 overflow-x: scroll; */
@@ -2536,32 +2536,56 @@
                 background-repeat: no-repeat;
                 background-position: center;
               }
+              .work-sec {
+                padding: 3vw 3vw;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* justify-content: center; */
+                /* overflow: hidden;
+                overflow-x: scroll;
+                flex-direction: row; */
+                
+              }
+              .work-sec2::-webkit-scrollbar {
+                width: 0px; /* Width of the scrollbar */
+              }
+              
+              /* Handle */
+              .work-sec2::-webkit-scrollbar-thumb {
+                /* background-color: #888;  */
+                border-radius: 0px; /* Rounded corners of the scrollbar handle */
+              }
               .work-sec2 {
                 /* padding: 3vw 10vw; */
                 width: 100%;
                 /* justify-content: center; */
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
+                flex-direction: row;
+                justify-content: flex-start;
                 align-items: center;
+                overflow: hidden;
+                overflow-x: scroll;
+                flex-direction: row;
                 
               }
               .work-sec-container {
                 margin-right: 0vw;
                 padding: 0vw 6vw;
-                width: 350px;
+                width: 320px;
                 background-color: var(--dark-banner-color);
                 border-radius: 16px;
                 display: flex;
-                /* justify-content: center; */
+                justify-content: center;
                 align-items: center;
                 flex-direction: row;
               }
               .work-sec-container2 {
-                margin-right: 0vw;
-                margin-bottom: 3vw;
+                margin-right: 3vw;
+                margin-bottom: 0vw;
                 padding: 0vw 6vw;
-                width: 350px;
+                width: 320px;
                 background-color: var(--infinity-light-color);
                 border-radius: 16px;
                 display: flex;
