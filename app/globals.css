@@ -111,6 +111,7 @@
               justify-content: center;
               align-items: center;
               flex-direction: row;
+              /* box-shadow: inset; */
 
             }
 
@@ -145,6 +146,7 @@
               padding-top: 5px;
               padding-bottom: 5px;
               border: solid 1px #e0e0e0;
+              box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
             }
 
             .review1 {
@@ -185,6 +187,7 @@
             .review-job {
               color: var(--infinity-dark-color);
               font-weight: bold;
+              text-align: center;
             }
 
             .review-line1 {
@@ -2155,7 +2158,7 @@
             
             @media (max-width: 800px) {
               .review-container {
-                width: 400px;
+                width: 350px;
                 height: 270px;
                 /* background-color: #bedbe2; */
                 display: flex;
@@ -2253,7 +2256,7 @@
                 margin-bottom: 3vw;
                 padding: 0 3vw;
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-columns: auto;
                 /* flex-direction: row;
                 overflow: hidden;
                 overflow-x: scroll; */

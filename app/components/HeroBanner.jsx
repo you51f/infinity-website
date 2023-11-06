@@ -36,7 +36,7 @@ const HeroBanner = () => {
     return (
       <div className="slider-container">
         {images.map((image, index) => (
-          <img
+          <div
             key={index}
             className={`slider-image ${currentImage === index ? 'active' : ''} ${currentImage === (index + 1) % images.length ? 'previous' : ''}`}
             style={{
