@@ -15,10 +15,10 @@ const HeroBanner = () => {
     
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
+      '/images/homepage2.webp',
       '/images/homepage1.webp',
       // '/images/banner2.png',
       // '/images/banner3.png',
-      '/images/homepage2.webp',
       '/images/homepage3.webp'
     ];
     
