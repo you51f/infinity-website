@@ -15,11 +15,11 @@ const HeroBanner = () => {
     
     const [currentImage, setCurrentImage] = useState(0);
     const images = [
-      '/images/banner1.webp',
+      '/images/homepage1.webp',
       // '/images/banner2.png',
       // '/images/banner3.png',
-      '/images/banner4.webp',
-      '/images/banner55.webp'
+      '/images/homepage2.webp',
+      '/images/homepage3.webp'
     ];
     
     useEffect(() => {
@@ -36,19 +36,20 @@ const HeroBanner = () => {
     return (
       <div className="slider-container">
         {images.map((image, index) => (
-          <div
+          <img
             key={index}
             className={`slider-image ${currentImage === index ? 'active' : ''} ${currentImage === (index + 1) % images.length ? 'previous' : ''}`}
             style={{
               backgroundImage: `url(${image})`,
             }}
+            
           />
         ))}
-        <div className='new-banner-text'>
+        {/* <div className='new-banner-text'>
           <h1 className='banner-text'>INFINITY Flight Horizons</h1>
           <span className='banner-space'></span>
           <p className='banner-sub-text'>Take You To Sky</p>
-        </div>
+        </div> */}
       </div>
     );
 };
