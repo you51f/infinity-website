@@ -15,6 +15,8 @@ export default async function Store () {
   var pilot = 0
   var CabinCrew = 0
   var AircraftModels = 0
+  var AircraftModels20 = 0
+  var AircraftModels16 = 0
   var Decorations = 0
   var others = 0
   return (
@@ -45,7 +47,47 @@ export default async function Store () {
           }
         })}
       </div>
-      {/* heading & category */} 
+        {/* heading & category */}
+        <div className="heading Aircraft-models20">
+          <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Aircraft models - 20cm</h3></div>
+          {/* <Link href="/store/aircraft-models"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
+        </div>
+
+      <div className="product-container">
+        {products.map((product) => {
+          if(product.category == "aircraft-models-20cm") {
+            if (AircraftModels20 < 3) {
+              AircraftModels20++
+              return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
+            }else if (AircraftModels20 === 3) {
+              AircraftModels20++
+              return <Link className='product-position' href="/store/aircraft-models-20cm"><MoreProduct/></Link>
+            }
+            
+          }
+        })}
+      </div>
+        {/* heading & category */}
+        <div className="heading Aircraft-models16">
+          <div className='pre-heading'><h3 className='heading-text'>INFINITY</h3>&nbsp;<h3 className='heading-text2'>Aircraft models - 16cm</h3></div>
+          {/* <Link href="/store/aircraft-models"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
+        </div>
+
+      <div className="product-container">
+        {products.map((product) => {
+          if(product.category == "aircraft-models-16cm") {
+            if (AircraftModels16 < 3) {
+              AircraftModels16++
+              return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
+            }else if (AircraftModels16 === 3) {
+              AircraftModels16++
+              return <Link className='product-position' href="/store/aircraft-models-16cm"><MoreProduct/></Link>
+            }
+            
+          }
+        })}
+      </div>
+       
 
 
         {/* heading & category */}
@@ -142,6 +184,12 @@ export default async function Store () {
         }
         .Aircraft-models {
           display: ${AircraftModels > 0 ? 'flex' : 'none'};
+        }
+        .Aircraft-models20 {
+          display: ${AircraftModels20 > 0 ? 'flex' : 'none'};
+        }
+        .Aircraft-models16 {
+          display: ${AircraftModels16 > 0 ? 'flex' : 'none'};
         }
         .Decorations {
           display: ${Decorations > 0 ? 'flex' : 'none'};

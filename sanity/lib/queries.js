@@ -2,6 +2,7 @@ import { groq } from "next-sanity";
 
 // Get all products
 export const productsQuery = groq`*[_type == "product"]`;
+export const imageSlidersQuery = groq`*[_type == "slider"]`;
 
 // Get a single product by its slug
 export const productQuery = groq`*[_type == "product" && slug.current == $slug][0]`;

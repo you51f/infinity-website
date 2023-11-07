@@ -1,15 +1,19 @@
-"use client"
+
+import { imageSlidersQuery } from '@/sanity/lib/queries';
+import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import Image from 'next/image'
 import Link from 'next/link'
 import { MdKeyboardArrowRight } from 'react-icons/md';
 import { Header, HeroBanner, Service, Product, WhatsAppButton, SectionOfWork, Footer, Advertising, TeamMember, Supplier, Review } from './components'
 
 
-export default function Home() {
+export default async function Home() {
+  const sliderImages = await sanityFetch(imageSlidersQuery); 
+  // console.log(sliderImages);
   return (
     <main >
       <Header/>
-      <HeroBanner/>
+      <HeroBanner sliderImages={sliderImages}/>
       <SectionOfWork/>
       {/* heading & category */}
       <div className="heading">

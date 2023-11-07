@@ -22,7 +22,7 @@ const Review = () => {
                 <div className="review-right">
                     <div className='review-text'><span className='review-qoute'>"</span>I had pleasure of working with your company to acquire uniform accessories for our Cabin Crew staff. The experience was incredibly professional from the start to finish. INFINITY Flight Horizons had surpassed my expectations and has solidified its place as our top choice for all aviation accessories.<span className='review-qoute'>"</span></div>
                     <div className='review-name'>Ms. Zeinab</div>
-                    <div className='review-job'>Cabin Crew Appearance Manager</div>
+                    <div className='review-job'>Grooming Officer</div>
                 </div>
             </div>
             <div className="review-container">

@@ -8,9 +8,9 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'INFINITY Flight Horizons',
   description: 'Take you to sky',
-  // icons: {
-  //   icon: '/public/favicon.ico',
-  // },
+  icons: {
+    icon: '/app/favicon.ico',
+  },
 }
  
 

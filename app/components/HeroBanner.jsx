@@ -1,7 +1,10 @@
 "use client"
 import React , { useState, useEffect } from 'react'
+import { client } from '@/sanity/lib/client';
+import imageUrlBuilder from "@sanity/image-url";
+import Image from 'next/image';
 
-const HeroBanner = () => {
+const HeroBanner = ({sliderImages}) => {
     // <div>
     //   <div>
     //     <div className='banner'>
@@ -14,18 +17,21 @@ const HeroBanner = () => {
     // </div> 
     
     const [currentImage, setCurrentImage] = useState(0);
-    const images = [
-      '/images/homepage2.webp',
-      '/images/homepage1.webp',
-      // '/images/banner2.png',
-      // '/images/banner3.png',
-      '/images/homepage3.webp'
-    ];
+    const builder = imageUrlBuilder(client);
+    // const images = [
+    //   '/images/homepage2.webp',
+    //   '/images/homepage1.webp',
+    //   // '/images/banner2.png',
+    //   // '/images/banner3.png',
+    //   '/images/homepage3.webp'
+    // ];
     
+    const images = sliderImages
+    // console.log(images);
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-        console.log("Hello, world!");
+        // console.log("Hello, world!");
       }, 5000);
     
       return () => {
@@ -35,14 +41,16 @@ const HeroBanner = () => {
     
     return (
       <div className="slider-container">
-        {images.map((image, index) => (
-          <div
+        {images.map((imageData, index) => (
+          <img
             key={index}
             className={`slider-image ${currentImage === index ? 'active' : ''} ${currentImage === (index + 1) % images.length ? 'previous' : ''}`}
-            style={{
-              backgroundImage: `url(${image})`,
-            }}
+            // style={{
+            //   backgroundImage: `url(${builder.image(imageData.image && imageData.image[0]).width(1550).height(609.2).url()})`,
+            // }}
+            src={builder.image(imageData.image && imageData.image[0]).width(1550).height(609).url()}
             
+            alt={imageData.image?.alt}
           />
         ))}
         {/* <div className='new-banner-text'>

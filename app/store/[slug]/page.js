@@ -25,6 +25,10 @@ export default async function categoryDetails ({ params }) {
     // console.log(params);  
     if (category == "aircraft-models") {
         title = "Aircraft models"
+    }else if (category == "aircraft-models-20cm") {
+        title = "Aircraft models - 20cm"
+    }else if (category == "aircraft-models-16cm") {
+        title = "Aircraft models - 16cm"
     }else if (category == "pilot") {
         title = "Pilot"
     }else if (category == "cabin-crew") {
