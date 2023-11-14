@@ -161,7 +161,7 @@ export default async function Store () {
         
       <div className="product-container">
         {products.map((product) => {
-          if(product.category != "decorations" && product.category != "cabin-crew" && product.category != "pilot" && product.category != "aircraft-models" ) {
+          if(product.category != "decorations" && product.category != "cabin-crew" && product.category != "pilot" && product.category != "aircraft-models" && product.category != "aircraft-models-16cm" && product.category != "aircraft-models-20cm" ) {
             if (others < 3) {
               others++
               return <div key={product._id} className="product-position"><Product key={product._id} product={product}/></div>
