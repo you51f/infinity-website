@@ -28,7 +28,7 @@ const ProductInfo = ({product}) => {
     }
     const handleAdd = () => {
       const sentProduct = {...product}
-      sentProduct.name = `${sentProduct.name} ${sentProduct.sizes && sentProduct.sizes[sizeIndex]?.size && `- ${sentProduct.sizes[sizeIndex].size}`}`
+      sentProduct.name = `${sentProduct.name} ${sentProduct.sizes && sentProduct.sizes[sizeIndex]?.size && `- ${sentProduct.sizes[sizeIndex].size}` || ""}`
       sentProduct.price = sentProduct.price + (sentProduct.sizes && sentProduct.sizes[sizeIndex]?.addedprice || 0)
 
       onAdd(sentProduct, qty);
