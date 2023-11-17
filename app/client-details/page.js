@@ -174,7 +174,10 @@ const ClientDetails = () => {
       </label>
 
       <div className='checkout-btn2'>
-        <h4>Note: Kindly note that your order may take 7 to 10 days to reach your doorstep as our team carefully prepares and send it to your address. Please don't hesitate to get in touch with us if you need any assistance.</h4>
+        <h4>Notes:</h4>
+        <h4>Carrier: We utilize DHL for shipping your order.</h4>
+        <h4>Delivery Time: Your order is expected to arrive within 7 to 10 business days.</h4>
+        <h4>Customs Duties: In such cases, customs duties may apply, and the recipient is responsible for handling them.</h4>
       </div>
       
     

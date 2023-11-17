@@ -1976,6 +1976,15 @@
             .checkout-btn2 {
               margin-top: 10px;
               margin-bottom: 10px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 100%;
+              flex-direction: column;
+            }
+            .checkout-btn2 h4 {
+              width: 100%;
+              text-align: left;
             }
             .button {
               padding: 0.8rem;
