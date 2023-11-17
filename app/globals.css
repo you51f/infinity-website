@@ -1982,9 +1982,17 @@
               width: 100%;
               flex-direction: column;
             }
-            .checkout-btn2 h4 {
+            .checkout-btn2-note {
               width: 100%;
               text-align: left;
+              font-size: 16px;
+              font-weight: bold;
+            }
+            .checkout-btn2-divnote {
+              width: 100%;
+              text-align: left;
+              font-size: 16px;
+              font-weight: normal;
             }
             .button {
               padding: 0.8rem;
