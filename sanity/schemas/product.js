@@ -62,6 +62,11 @@ export default {
             ]
           }
         ]
-      }
+      },
+      { 
+        name: 'stock',
+        title: 'Stock',
+        type: 'number',
+      },
     ]
   } 

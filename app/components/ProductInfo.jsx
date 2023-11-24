@@ -5,19 +5,20 @@ import imageUrlBuilder from "@sanity/image-url";
 import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-icons/ai';
 import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
+import { PiWarningCircleDuotone } from "react-icons/pi";
 
 
 
 
 const ProductInfo = ({product}) => {
-  const { image, name, details, price, category, sizes } = product;
+  const { image, name, details, price, category, sizes, stock } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
-    const [sizeIndex, setSizeIndex] = useState(0);
+    const [sizeIndex, setSizeIndex] = useState(0); 
     const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
 
     var sizeNum = 0
-    const handleBuyNow = () => {
+    const handleBuyNow = () => { 
       const sentProduct = {...product}
       sentProduct.name = `${sentProduct.name} ${sentProduct.sizes && sentProduct.sizes[sizeIndex]?.size && `- ${sentProduct.sizes[sizeIndex].size}` || ""}`
       sentProduct.price = sentProduct.price + (sentProduct.sizes && sentProduct.sizes[sizeIndex]?.addedprice || 0)
@@ -81,9 +82,15 @@ const ProductInfo = ({product}) => {
             })
           }
           </div>
-          <div className="buttons">
-          <button type="button" className="add-to-cart" onClick={() => handleAdd(product)}>Add to Cart</button>
-            <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button>
+          <div >
+          {stock === 0 ? 
+           <button type="button" className="no-stock"><PiWarningCircleDuotone/> Not available right now</button> 
+          : <div className="buttons">
+            <button type="button" className="add-to-cart" onClick={() => handleAdd(product)}>Add to Cart</button>
+           <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button>
+           </div>
+           }
+            
           </div>
         </div>
       </div>

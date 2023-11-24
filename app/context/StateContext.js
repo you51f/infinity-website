@@ -57,33 +57,13 @@ export const StateContext = ({ children }) => {
     returnPolicyChecked: false,
   });
 
-  // const onAdd = (product, quantity) => {
-  //   const checkProductInCart = cartItems.find((item) => (item._id === product._id && item.name === product.name));
-    
-  //   setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
-  //   setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
-    
-  //   if(checkProductInCart) {
-  //     const updatedCartItems = cartItems.map((cartProduct) => {
-  //       if(cartProduct._id === product._id && cartProduct.name === product.name) return {
-  //         ...cartProduct,
-  //         quantity: cartProduct.quantity + quantity
-  //       }
-  //     })
-
-  //     setCartItems(updatedCartItems);
-  //   } else {
-  //     product.quantity = quantity;
-      
-  //     setCartItems([...cartItems, { ...product }]);
-  //   }
-
-  // }
+ 
   
   const onAdd = (product, quantity) => {
     const checkProductInCart = cartItems.find((item) => item._id === product._id && item.name === product.name);
   
-    setTotalPrice((prevTotalPrice) => prevTotalPrice + product.price * quantity);
+    // setTotalPrice((prevTotalPrice) => (prevTotalPrice + product.price * quantity).toFixed(2));
+    setTotalPrice((prevTotalPrice) => (parseFloat(prevTotalPrice) + product.price * quantity).toFixed(2));
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
   
     if (checkProductInCart) {
@@ -104,14 +84,7 @@ export const StateContext = ({ children }) => {
     }
   };
 
-  // const onRemove = (product) => {
-  //   foundProduct = cartItems.find((item) => (item._id === product._id && item.name === product.name));
-  //   const newCartItems = cartItems.filter((item) => (item._id != product._id && item.name != product.name));
-
-  //   setTotalPrice((prevTotalPrice) => prevTotalPrice -foundProduct.price * foundProduct.quantity);
-  //   setTotalQuantities(prevTotalQuantities => prevTotalQuantities - foundProduct.quantity);
-  //   setCartItems(newCartItems);
-  // }
+ 
   const onRemove = (product) => {
     const foundProductIndex = cartItems.findIndex((item) => item._id === product._id && item.name === product.name);
   
@@ -119,30 +92,15 @@ export const StateContext = ({ children }) => {
       const foundProduct = cartItems[foundProductIndex];
       const newCartItems = cartItems.filter((item, index) => index !== foundProductIndex);
   
-      setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
+      // setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price * foundProduct.quantity);
+      // setTotalPrice((prevTotalPrice) => (prevTotalPrice + product.price * quantity).toFixed(2));
+      setTotalPrice((prevTotalPrice) => (parseFloat(prevTotalPrice) + foundProduct.price * foundProduct.quantity).toFixed(2));
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - foundProduct.quantity);
       setCartItems(newCartItems);
     }
   };
 
-  // const toggleCartItemQuanitity = (id, name, value) => {
-  //   foundProduct = cartItems.find((item) => (item._id === id && item.name === name))
-  //   index = cartItems.findIndex((product) => (product._id === id && product.name === name));
-  //   const newCartItems = cartItems.filter((item) => (item._id !== id && item.name === name))
-
-  //   if(value === 'inc') {
-  //     setCartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity + 1 } ]);
-  //     setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price)
-  //     setTotalQuantities(prevTotalQuantities => prevTotalQuantities + 1)
-  //   } else if(value === 'dec') {
-  //     if (foundProduct.quantity > 1) {
-  //       setCartItems([...newCartItems, { ...foundProduct, quantity: foundProduct.quantity - 1 } ]);
-  //       setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price)
-  //       setTotalQuantities(prevTotalQuantities => prevTotalQuantities - 1)
-  //     }
-  //   }
-  // }
-
+  
   const toggleCartItemQuanitity = (id, name, value) => {
     const foundProductIndex = cartItems.findIndex((item) => item._id === id && item.name === name);
   
@@ -153,13 +111,13 @@ export const StateContext = ({ children }) => {
       if (value === 'inc') {
         newCartItems[foundProductIndex] = { ...foundProduct, quantity: foundProduct.quantity + 1 };
         setCartItems(newCartItems);
-        setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+        setTotalPrice((prevTotalPrice) => (parseFloat(prevTotalPrice) + foundProduct.price).toFixed(2));
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
       } else if (value === 'dec') {
         if (foundProduct.quantity > 1) {
           newCartItems[foundProductIndex] = { ...foundProduct, quantity: foundProduct.quantity - 1 };
           setCartItems(newCartItems);
-          setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+          setTotalPrice((prevTotalPrice) => (parseFloat(prevTotalPrice) - foundProduct.price).toFixed(2));
           setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
         }
       }

@@ -25,7 +25,7 @@ export async function sanityFetch(query, params = DEFAULT_PARAMS, tags = DEFAULT
         perspective: "previewDrafts",
       }),
       next: {
-        ...({ revalidate: 30 }),
+        ...({ revalidate: 10 }),
         tags,
       },
     });

@@ -68,8 +68,12 @@ const Cart = () => {
             <div className="product" key={item._id}>
               <img src={urlForImage(item?.image[0])} className="cart-product-image" />
               <div className="item-desc">
-                <div className="flex top">
+                <div className="item_name">
                   <h5>{item?.name}</h5>
+                  {/* <h4>${item?.price}</h4> */}
+                </div>
+                <div className="flex top">
+                  {/* <h5>{item?.name}</h5> */}
                   <h4>${item?.price}</h4>
                 </div>
                 <div className="flex bottom">
@@ -79,8 +83,10 @@ const Cart = () => {
                     <AiOutlineMinus />
                     </span>
                     <span className="num" onClick="">{item?.quantity}</span>
-                    <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, item.name, 'inc') }><AiOutlinePlus /></span>
+                    {item.quantity != item?.stock ? <span className="plus" onClick={() => toggleCartItemQuanitity(item._id, item.name, 'inc') }><AiOutlinePlus /></span> : <span className="max" ><AiOutlinePlus /></span>}
                   </p>
+                  {/* {item.quantity != item?.stock ? <p >Max </p> : null} */}
+                  
                   </div>
                   <button
                     type="button"

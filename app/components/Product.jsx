@@ -9,7 +9,7 @@ import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(client);
 
-const Product = ({product: { image, name, slug, price, category }}) => {
+const Product = ({product: { image, name, slug, price, category, stock }}) => {
   return (
     <div>
       <Link href={`/product/${slug?.current}`}>
@@ -26,8 +26,8 @@ const Product = ({product: { image, name, slug, price, category }}) => {
             />
           ) : null}
           <div className='product-text-container'>
-            <h5 >{name}</h5>
-            <h5 >${price}</h5>
+            <div className='product_name'>{name}</div>
+            <div className='product_price'>${price}</div>
           </div>
           <div className='product-btn'>More Details</div>
         </div>
