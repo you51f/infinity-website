@@ -1353,6 +1353,7 @@
               height: 10px;
               width: 170px;
               font-size: 14px;
+              font-weight: bold;
               display: flex;
               flex-direction: row; 
               justify-content: flex-start;
