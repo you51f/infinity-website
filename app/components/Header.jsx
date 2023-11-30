@@ -40,8 +40,8 @@ const Header = () => {
         <div className='header-container2 ripplex'>
            
             <Link href='/' className={pathname === '/' ? 'main-ripple' : 'ripple'}  >Home</Link>
-            <Link href='/store' className={pathname === '/store' ? 'main-ripple' : 'ripple'}  >Store</Link>
-            <Link href='/aviation' className={pathname === '/aviation' ? 'main-ripple' : 'ripple'}  >Aviation</Link>
+            {/* <Link href='/store' className={pathname === '/store' ? 'main-ripple' : 'ripple'}  >Store</Link>
+            <Link href='/aviation' className={pathname === '/aviation' ? 'main-ripple' : 'ripple'}  >Aviation</Link> */}
             <Link href='/contact' className={pathname === '/contact' ? 'main-ripple' : 'ripple'}  >Contact</Link>
             <Link href='/about' className={pathname === '/about' ? 'main-ripple' : 'ripple'}  >About Us</Link>
            
@@ -49,8 +49,8 @@ const Header = () => {
         <div className='header-container2 ripple-show'>
             <div className='ripple-row'>
             <Link href='/' className={pathname === '/' ? 'main-ripple' : 'ripple'}  >Home</Link>
-            <Link href='/store' className={pathname === '/store' ? 'main-ripple' : 'ripple'}  >Store</Link>
-            <Link href='/aviation' className={pathname === '/aviation' ? 'main-ripple' : 'ripple'}  >Aviation</Link>
+            {/* <Link href='/store' className={pathname === '/store' ? 'main-ripple' : 'ripple'}  >Store</Link>
+            <Link href='/aviation' className={pathname === '/aviation' ? 'main-ripple' : 'ripple'}  >Aviation</Link> */}
             <Link href='/contact' className={pathname === '/contact' ? 'main-ripple' : 'ripple'}  >Contact</Link>
             <Link href='/about' className={pathname === '/about' ? 'main-ripple' : 'ripple'}  >About Us</Link>
 

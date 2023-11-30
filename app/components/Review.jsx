@@ -2,7 +2,7 @@ import React from 'react'
 
 const Review = () => {
   return (
-    <div >
+    // <div >
         
         <div className='review-line1'>
             <div className="review-container">
@@ -38,7 +38,7 @@ const Review = () => {
         </div>
        
         
-    </div>
+    // </div>
   )
 }
 

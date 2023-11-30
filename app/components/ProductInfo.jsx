@@ -86,8 +86,9 @@ const ProductInfo = ({product}) => {
           {stock === 0 ? 
            <button type="button" className="no-stock"><PiWarningCircleDuotone/> Not available right now</button> 
           : <div className="buttons">
-            <button type="button" className="add-to-cart" onClick={() => handleAdd(product)}>Add to Cart</button>
-           <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button>
+            {/* <button type="button" className="add-to-cart" onClick={() => handleAdd(product)}>Add to Cart</button>
+           <button type="button" className="buy-now" onClick={() => handleBuyNow()}>Buy Now</button> */}
+           <button type="button" className="buy-now" onClick={() => handleAdd(product)}>Add to Cart</button>
            </div>
            }
             
