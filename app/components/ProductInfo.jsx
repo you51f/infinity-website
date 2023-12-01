@@ -62,7 +62,8 @@ const ProductInfo = ({product}) => {
 
         <div className="product-detail-desc">
           <h1>{name} {sizes && sizes[sizeIndex]?.size && `- ${sizes[sizeIndex].size}`}</h1>
-          <h4>Details: </h4>
+          
+            {/* <h4 className='details'>Details: </h4> */}
           <p>{details}</p>
           <p className="price">${price + (sizes && sizes[sizeIndex]?.addedprice || 0)}</p>
           {/* <div className="quantity">
@@ -99,6 +100,9 @@ const ProductInfo = ({product}) => {
         
         .size {
           display: ${sizeNum != 0 ? 'flex' : 'none'};
+        }
+        .details {
+          display: ${details != "" ? 'flex' : 'none'};
         }
         
       `}</style>
