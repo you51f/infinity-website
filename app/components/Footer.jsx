@@ -7,6 +7,9 @@ import { AiFillFacebook } from 'react-icons/ai';
 import { FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from 'react-icons/fa6';
 import { BiLogoTiktok } from 'react-icons/bi';
+import { FaStripe } from "react-icons/fa6";
+import { RiVisaLine } from "react-icons/ri";
+import { FaCcMastercard } from "react-icons/fa";
 import Link from 'next/link';
 
 const Footer = () => {
@@ -35,6 +38,7 @@ const Footer = () => {
             <Link href="https://www.tiktok.com/@infinity_fh?_t=8hkLfukvhtl&_r=1" target="_blank"><BiLogoTiktok  className='icon-space-footer'/></Link>
             <Link href="https://www.linkedin.com/in/infinity-flight-26990929b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><FaLinkedin  className='icon-space-footer'/></Link>
             </div>
+          
         </div>  
         <div className="footer-section2">
         <div className="footer-section3">
@@ -48,12 +52,19 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-section3">
-          <div className="footer-lined-title">Our Policies</div>
+          <div className="footer-lined-title">Our Policies & Payments</div>
           <ul className="footer-list">
             {/* <li className='doted-text'>About Us</li> */}
             <li className='doted-text'><Link href={"/privacy-policy"}>Privacy policy</Link></li>
             <li className='doted-text'><Link href={"/return-policy"}>Return policy</Link></li>
           </ul>
+          <div className="footer-contact">We Accept:</div>
+          <div className="footer-follow-icons">
+            <RiVisaLine  className='icon-space-footer'/>
+            <FaCcMastercard classN  ame='icon-space-footer'/>
+            <FaStripe  className='icon-space-footer'/>
+            
+            </div>
         </div>
         </div>
         </div>

@@ -6,12 +6,13 @@ import { AiOutlineMinus, AiOutlinePlus, AiFillStar, AiOutlineStar } from 'react-
 import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
 import { PiWarningCircleDuotone } from "react-icons/pi";
+import { Product } from './index';
 
 
 
 
-const ProductInfo = ({product}) => {
-  const { image, name, details, price, category, sizes, stock } = product;
+const ProductInfo = ({product, products}) => {
+  const { _id, image, name, details, price, category, sizes, stock } = product;
     const builder = imageUrlBuilder(client);
     const [index, setIndex] = useState(0);
     const [sizeIndex, setSizeIndex] = useState(0); 
@@ -34,6 +35,14 @@ const ProductInfo = ({product}) => {
 
       onAdd(sentProduct, qty);
   
+    }
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
     }
 
   return (
@@ -95,6 +104,24 @@ const ProductInfo = ({product}) => {
             
           </div>
         </div>
+      </div>
+      <div className="maylike-products-wrapper">
+        <div className="maylike-products-main">
+            <h2>You may also like</h2>
+            <div className="marquee">
+              <div className="maylike-products-container track">
+                {shuffleArray(products)
+                  .slice(0, 10)
+                  .map((item) =>
+                    item._id !== _id ? (
+                      <div key={item._id} className="product-position">
+                        <Product key={item._id} product={item} />
+                      </div>
+                    ) : null
+                  )}
+              </div>
+            </div>
+          </div>
       </div>
       <style>{`
         

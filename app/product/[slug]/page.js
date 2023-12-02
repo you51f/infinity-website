@@ -1,7 +1,7 @@
 
 import { client } from '@/sanity/lib/client';
 import { urlForImage } from '@/sanity/lib/image';
-import { productPathsQuery, productQuery } from '@/sanity/lib/queries';
+import { productPathsQuery, productQuery, productsQuery } from '@/sanity/lib/queries';
 import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import imageUrlBuilder from "@sanity/image-url";
 import {React } from 'react'
@@ -18,6 +18,7 @@ import { Footer, Header, ProductInfo } from '@/app/components';
 
 export default async function ProductDetails ({ params }) {
   const product = await sanityFetch(productQuery, params);
+  const products = await sanityFetch(productsQuery, params);
   const { image, name, details, price, category } = product;
   const builder = imageUrlBuilder(client); 
   // const [index, setIndex] = useState(0);
@@ -25,7 +26,7 @@ export default async function ProductDetails ({ params }) {
   return (
     <div>
       <Header/>
-      <ProductInfo product={product}/>
+      <ProductInfo product={product} products={products}/>
       {/* <div className="product-detail-container">
         <div>  
           <div className="image-container">

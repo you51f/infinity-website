@@ -45,7 +45,7 @@ export default async function categoryDetails ({ params }) {
       <div className='category'>
         {/* heading & category */}
       <div className="heading">
-          <div className='pre-heading'><h3 className='heading-text'>Infinity</h3>&nbsp;<h3 className='heading-text2'>{title}</h3></div>
+          <div className='pre-heading'><h3 className='heading-text'>INFINTIY</h3>&nbsp;<h3 className='heading-text2'>{title}</h3></div>
           {/* <Link href="/store/aircraft-models"><h5 className='heading-text-normal' >View All <MdKeyboardArrowRight className='heading-icon'/></h5></Link> */}
         </div>
 
