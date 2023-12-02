@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="footer-contact">We Accept:</div>
           <div className="footer-follow-icons">
             <RiVisaLine  className='icon-space-footer'/>
-            <FaCcMastercard classN  ame='icon-space-footer'/>
+            <FaCcMastercard className='icon-space-footer'/>
             <FaStripe  className='icon-space-footer'/>
             
             </div>
