@@ -111,7 +111,7 @@ const ProductInfo = ({product, products}) => {
             <div className="marquee">
               <div className="maylike-products-container track">
                 {shuffleArray(products)
-                  .slice(0, 10)
+                  .slice(0, 15)
                   .map((item) =>
                     item._id !== _id ? (
                       <div key={item._id} className="product-position">

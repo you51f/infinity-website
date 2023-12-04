@@ -11,6 +11,7 @@ import { FaStripe } from "react-icons/fa6";
 import { RiVisaLine } from "react-icons/ri";
 import { FaCcMastercard } from "react-icons/fa";
 import Link from 'next/link';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
@@ -42,28 +43,36 @@ const Footer = () => {
         </div>  
         <div className="footer-section2">
         <div className="footer-section3">
-          <div className="footer-lined-title">Pages & Services</div>
-          <ul className="footer-list">
-            <li className='doted-text'><Link href={'/'}>Home</Link></li>
-            <li className='doted-text'><Link href={'/aviation'}>Aviation</Link></li>
-            {/* <li className='doted-text'><Link href={'/store'}>Store</Link></li>  */}
-            <li className='doted-text'><Link href={'/contact'}>Contact</Link></li>
-            <li className='doted-text'><Link href={'/about'}>About Us</Link></li>
-          </ul>
-        </div>
-        <div className="footer-section3">
-          <div className="footer-lined-title">Our Policies & Payments</div>
+        <div className="footer-lined-title">Our Policies</div>
           <ul className="footer-list">
             {/* <li className='doted-text'>About Us</li> */}
             <li className='doted-text'><Link href={"/privacy-policy"}>Privacy policy</Link></li>
             <li className='doted-text'><Link href={"/return-policy"}>Return policy</Link></li>
           </ul>
-          <div className="footer-contact">We Accept:</div>
-          <div className="footer-follow-icons">
-            <RiVisaLine  className='icon-space-footer'/>
+          {/* <div className="footer-lined-title">Pages & Services</div>
+          <ul className="footer-list">
+            <li className='doted-text'><Link href={'/'}>Home</Link></li>
+            <li className='doted-text'><Link href={'/aviation'}>Aviation</Link></li>
+            <li className='doted-text'><Link href={'/store'}>Store</Link></li> 
+            <li className='doted-text'><Link href={'/contact'}>Contact</Link></li>
+            <li className='doted-text'><Link href={'/about'}>About Us</Link></li>
+          </ul> */}
+        </div>
+        <div className="footer-section3">
+          <div className="footer-lined-title">You Can Pay With</div>
+          {/* <ul className="footer-list">
+            <li className='doted-text'>About Us</li>
+            <li className='doted-text'><Link href={"/privacy-policy"}>Privacy policy</Link></li>
+            <li className='doted-text'><Link href={"/return-policy"}>Return policy</Link></li>
+          </ul>
+          <div className="footer-contact">We Accept:</div> */}
+          <div className="footer-follow-icons2">
+            {/* <RiVisaLine  className='icon-space-footer'/>
             <FaCcMastercard className='icon-space-footer'/>
-            <FaStripe  className='icon-space-footer'/>
-            
+            <FaStripe  className='icon-space-footer'/> */}
+            <Image src={'/images/stripe-logo.png'} width={70} height={35} alt={''} className='icon-space-footer'/>
+            <Image src={'/images/mastercard-logo.png'} width={70} height={40} alt={''} className='icon-space-footer'/>
+            <Image src={'/images/visa-logo.png'} width={70} height={20} alt={''} className='icon-space-footer'/>
             </div>
         </div>
         </div>
@@ -71,7 +80,7 @@ const Footer = () => {
         <div className="evo-side">
           <Link className='evo' href={'https://twitter.com/evoTechSd?t=u3In7S8TfB3tlr9hsjmZSQ&s=35'} target="_blank" attribute></Link>
           <div className="footer-line"></div>
-        <div className="copy-right">© 2022 All rights reserved. EVO Technologies & Services.</div>
+        <div className="copy-right">© 2023 All rights reserved. INFINITY Flight Horizons.</div>
         </div>
         
       </div>
