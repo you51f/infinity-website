@@ -89,7 +89,7 @@ const ClientDetails = () => {
         value={formData.countryRegion}
         onChange={(e) => updateFormValue('countryRegion', e.target.value)}
         required
-        disabled
+        // disabled
         className="input"
       />
 

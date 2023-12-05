@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import { WorldLocations, Statistics, TeamMember, Footer, Header, WhatsAppButton } from '../components'
 import { HiOutlineMail } from 'react-icons/hi';
 import { sendContactForm } from '../api/send';
+import Image from 'next/image';
 
 const About = () => {
   const [company, setCompany] = useState('');
@@ -82,7 +83,7 @@ const About = () => {
           <p className='left-text-text'>As part of our commitment to excellence, we also manufacture all aviation accessories and uniforms for pilots, cabin crew  and engineers. We also manufacture high quality aircraft models with different sizes and provide office decorations for airlines and travel agencies.</p>
         </div>
         <div className='right-about-image'>
-          <div className="about-img"></div>
+          <Image src={'/images/reg.png'} width={349} height={440} className="about-img"/>
         </div>
       </div>
       <Statistics/>

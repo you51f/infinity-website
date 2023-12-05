@@ -1048,9 +1048,9 @@
               content: "";
               display: block;
               /* position: relative; */
-              width: 100%;
-              height: 400px;
-              background-image: url(/images/about1.webp);
+              /* width: 100%;
+              height: 450px; */
+              /* background-image: url(/images/reg.png); */
               background-size: contain;
               background-repeat: no-repeat;
               background-position: right;
@@ -1960,8 +1960,9 @@
             .right-about-image {
               display: flex;
               width: 50%;
-              align-items: flex-end;
-              flex-direction: column;
+              align-items: center;
+              justify-content: flex-end;
+              flex-direction: row;
               margin-bottom: 3vw;
             }
             .right-form {
@@ -2534,9 +2535,9 @@
                 content: "";
                 display: block;
                 /* position: relative; */
-                width: 100%;
-                height: 400px;
-                background-image: url(/images/about1.webp);
+                /* width: 100%;
+                height: 400px; */
+                /* background-image: url(/images/reg.png); */
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
@@ -3074,9 +3075,9 @@
             }
             .right-about-image {
               display: flex;
-              height: 300px;
+              height: 440px;
               width: 100%;
-              align-items: flex-end;
+              align-items: center;
               flex-direction: column;
               margin-bottom: 3vw;
             }
