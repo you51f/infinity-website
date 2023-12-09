@@ -27,7 +27,7 @@ const HeroBanner = ({sliderImages}) => {
     // ];
     
     const images = sliderImages
-    // console.log(images);
+    console.log(builder.image(images[0].image && images[0].image[0]).width(1550).height(370).url());
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentImage((prevImage) => (prevImage + 1) % images.length);
@@ -48,9 +48,9 @@ const HeroBanner = ({sliderImages}) => {
             // style={{
             //   backgroundImage: `url(${builder.image(imageData.image && imageData.image[0]).width(1550).height(609.2).url()})`,
             // }}
-            src={builder.image(imageData.image && imageData.image[0]).width(1550).height(609).url()}
+            src={builder.image(imageData.image && imageData.image[0]).width(1550).height(361).url()}
             
-            alt={imageData.image?.alt}
+            alt={imageData.image[0]?.alt}
           />
         ))}
         {/* <div className='new-banner-text'>

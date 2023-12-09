@@ -19,7 +19,7 @@ const Product = ({product: { image, name, slug, price, category, stock }}) => {
             src={builder.image(image && image[0]).width(300).height(300).url()} 
             // src={builder.image(post.mainImage).width(300).height(300).url()} 
             // src={urlFor( image && image[0])} 
-            width={180}
+            width={170}
             height={140}  
             className="productImage"
             alt={image[0]?.alt}
