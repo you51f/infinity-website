@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import { AiOutlineMinus, AiOutlinePlus, AiOutlineLeft, AiOutlineShopping } from 'react-icons/ai';
 import { TiDeleteOutline } from 'react-icons/ti';
@@ -8,12 +8,14 @@ import { TiDeleteOutline } from 'react-icons/ti';
 import { useStateContext } from '../context/StateContext';
 import { urlForImage } from '@/sanity/lib/image';
 import getStripe from '../lib/getStripe';
+import { Promo } from '.';
 // import { urlFor } from '../lib/client'; 
 // import getStripe from '../lib/getStripe';
 
 const Cart = () => {
   const cartRef = useRef();
-  const { totalPrice, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
+  // const [openPromoTab, setOpenPromoTab] = useState(false);
+  const { totalPrice,openPromoTab, setOpenPromoTab, totalQuantities, cartItems, setShowCart, toggleCartItemQuanitity, onRemove } = useStateContext();
 
   const handleCheckout = async () => {
     const stripe = await getStripe();
@@ -35,9 +37,26 @@ const Cart = () => {
     stripe.redirectToCheckout({ sessionId: data.id });
   }
 
+  const openPromo = () => {
+    setOpenPromoTab(!openPromoTab)
+  }
+
   return (
     <div className="cart-wrapper" ref={cartRef}>
       <div className="cart-container">
+        {openPromoTab ? 
+        <div>
+        <button
+        type="button"
+        className="cart-heading"
+        onClick={() => openPromo()}>
+          <AiOutlineLeft />
+          <span className="heading">Back to Cart</span>
+        </button>
+        <Promo/>
+        </div>
+        : 
+        <div>
         <button
         type="button"
         className="cart-heading"
@@ -102,11 +121,19 @@ const Cart = () => {
         </div>
         {cartItems.length >= 1 && (
           <div className="cart-bottom">
+            {/* <div className="promo-text">
+              <h3>use promo code</h3>
+            </div> */}
             <div className="total">
               <h3>Subtotal:</h3>
               <h3>${totalPrice}</h3>
             </div>
             <div className="btn-container">
+            
+              {/* <button type="button" onClick={() => openPromo()} className="btn_promo" >
+              use promo code
+              </button> */}
+             
               <Link href="/client-details">
               <button type="button" className="btn" >
                 Pay with Stripe
@@ -118,6 +145,8 @@ const Cart = () => {
             </div>
           </div>
         )}
+        </div>
+        }
       </div>
     </div>
   )

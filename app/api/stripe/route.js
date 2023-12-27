@@ -12,6 +12,7 @@ export async function POST(request) {
         const params = {
             submit_type: 'pay',
             mode: 'payment',
+            allow_promotion_codes: true,
             payment_method_types: ['card'],
             billing_address_collection: 'auto',
             shipping_options: [

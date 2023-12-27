@@ -1,16 +1,18 @@
 
-import { imageSlidersQuery, productsQuery } from '@/sanity/lib/queries';
+import { imageSlidersQuery, productsQuery, promosQuery } from '@/sanity/lib/queries';
 import { sanityFetch } from '@/sanity/lib/sanityFetch';
 import Image from 'next/image'
 import Link from 'next/link'
 import { MdKeyboardArrowRight } from 'react-icons/md';
-import { Header, HeroBanner, Service, WhatsAppButton, SectionOfWork, MoreProduct, Product, Footer, Advertising, TeamMember, Supplier, Review } from './components'
+import { Header, HeroBanner, Service, WhatsAppButton, SectionOfWork, MoreProduct, Product, Footer, Advertising, TeamMember, Supplier, Review, GetPromo } from './components'
 
 
 export default async function Home() {
   const sliderImages = await sanityFetch(imageSlidersQuery); 
   // console.log(sliderImages);
   const products = await sanityFetch(productsQuery); 
+  // const promos = await sanityFetch(promosQuery);
+
   var pilot = 0
   var CabinCrew = 0
   var AircraftModels = 0
@@ -22,6 +24,9 @@ export default async function Home() {
     <main >
       <Header/>
       <HeroBanner sliderImages={sliderImages}/>
+      {/* <div className='no-promo'>
+      <GetPromo fetchedPromos={promos}/>
+      </div> */}
       {/* <SectionOfWork/> */}
        {/* heading & category */}
        <div className="heading Aircraft-models">

@@ -16,3 +16,5 @@ export { default as Cart } from "./Cart";
 export { default as SuccessInfo } from "./SuccessInfo";
 export { default as MoreProduct } from "./MoreProduct";
 export { default as Review } from "./Review";
+export { default as Promo } from "./Promo";
+export { default as GetPromo } from "./GetPromo";

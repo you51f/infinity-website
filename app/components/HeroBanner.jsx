@@ -27,7 +27,7 @@ const HeroBanner = ({sliderImages}) => {
     // ];
     
     const images = sliderImages
-    console.log(builder.image(images[0].image && images[0].image[0]).width(1550).height(370).url());
+    // console.log(builder.image(images[0].image && images[0].image[0]).width(1550).height(370).url());
     useEffect(() => {
       const timer = setInterval(() => {
         setCurrentImage((prevImage) => (prevImage + 1) % images.length);
